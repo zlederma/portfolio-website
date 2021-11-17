@@ -1,10 +1,14 @@
 import React from 'react'
 import ProjectCards from '../components/ProjectCards'
-import { Image } from 'react-bootstrap'
+import { Image, Row, Col } from 'react-bootstrap'
 import jsLogo from '../assets/javascript-logo.png'
 import rLogo from '../assets/react-logo.png'
 import openWeatherLogo from '../assets/open-weather-logo.jpg'
 import tempBlanket1 from '../assets/tempblanket/temp-blanket1.png'
+// import RepoButton from '..assets/RepoButton'
+import RepoButton from '../assets/RepoButton'
+import Technologies from '../assets/tempblanket/technologies.png'
+// import repo from '..components/repo'
 
 const h1Style = {
     color: "#c5462c",
@@ -23,10 +27,12 @@ const pStyle = {
 
 }
 //className for paragraph elements
-const h1Class = "mb-2"
+const h1Class = "mb-4"
 const h2Class = "mb-2 mt-5"
 const pClass = "mb-4"
 const imgClass = "mb-2"
+
+
 
 export default function TemperatureBlanket() {
     return (
@@ -34,9 +40,28 @@ export default function TemperatureBlanket() {
             <div style={{ display: "flex", justifyContent: "center" }}>
                 <div className="mx-4" style={{ maxWidth: "1100px" }}>
                     <div style={{ minHeight: "100px" }}></div>
-
                     <h1 className={`${h1Class} text-center display-4 `} style={h1Style}> Temperature Blanket </h1>
-                    <Image className={`${imgClass} mx-auto d-block`} src={tempBlanket1} style={{ width: "80%" }} />
+                    <div>
+                        <Row>
+                            <Col lg={8} md={12}>
+                                <Image className={`${imgClass} mx-auto d-block mb-4`} src={tempBlanket1} style={{ width: "90%" }} />
+                            </Col>
+                            <Col lg={4} style={{ display: "flex", alignItems: "center" }}>
+                                <div className="mx-auto d-block mb-3" style={{
+                                    paddingTop: "15px", width: "350px",
+                                    boxShadow: "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"
+                                }}>
+                                    <Image src={Technologies} style={{ width: "300px", paddingBottom: "10px" }} ></Image>
+                                    <div style={{ borderTop: "1px solid lightgray" }}></div>
+                                    <div className="my-3" style={{ display: "flex", justifyContent: "center" }}>
+
+                                        <a href="https://github.com/zlederma/weather-blanket" target="_blank" rel="noreferrer" > <RepoButton className="mt-3" style={{ boxShadow: "rgba(0, 0, 0, 0.12) 0px 2px 3px, rgba(0, 0, 0, 0.24) 0px 1px 3px" }}>
+                                        </RepoButton> </a>
+                                    </div>
+                                </div>
+                            </Col>
+                        </Row>
+                    </div>
                     <h2 className={h2Class} style={h2Style}> Tik-Tok Trend in Digital Form </h2>
                     <p className={pClass} style={pStyle}> My inspiration for this project came from a Tik-Tok trend.
                         In the trend people would crochet one line of a blanket for every day of weather data. After
