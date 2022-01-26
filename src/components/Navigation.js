@@ -35,7 +35,7 @@ export default function Navigation() {
                         </Nav>
                         <Nav className="mx-3 flex-row" justify="true" >
                             <Nav.Link href="https://www.linkedin.com/in/zoe-lederman" target="_blank"> <FaLinkedin className="icon" style={{ fontSize: "30px" }} /></Nav.Link>
-                            <Nav.Link href="https:/github.com/zlederma" target="_blank"><FaGithub className="icon" style={{ fontSize: "30px" }} /></Nav.Link>
+                            <Nav.Link href="https://www.github.com/zlederma" target="_blank"><FaGithub className="icon" style={{ fontSize: "30px" }} /></Nav.Link>
                             <Nav.Link href={resume} target="_blank"><IoDocumentTextSharp className="icon" style={{ fontSize: "30px" }} /></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
