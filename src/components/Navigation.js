@@ -6,7 +6,7 @@ import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap"
 import React from 'react'
 import { FaLinkedin, FaGithub, } from "react-icons/fa";
 import { IoDocumentTextSharp } from "react-icons/io5";
-import resume from '../assets/Resume_Zoe_Lederman.pdf';
+import resume from '../assets/Resume-Zoe-Lederman.pdf';
 import NameIcon from '../assets/NameIcon';
 
 
