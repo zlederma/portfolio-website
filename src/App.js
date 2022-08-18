@@ -8,14 +8,14 @@ import PortfolioCeption from './pages/PortfolioCeption';
 import './App.css';
 import Footer from './components/Footer';
 import { useState, useEffect } from "react";
-import { getCaseStudyModel } from './utils/case-study-model-adapter';
+import { getCaseStudyModel } from './utils/case-study-fetcher';
 
 function App() {
-  const [page, setPage] = useState(null);
-  useEffect(() => {
-    const data = getCaseStudyModel().then(data => setPage(data));
-  }, []);
-  console.log(page);
+  // const [page, setPage] = useState(null);
+  // useEffect(() => {
+  //   const data = getCaseStudyModel().then(data => setPage(data));
+  // }, []);
+  // console.log(page);
   return (
     <div style={{ minWidth: "100vw" }}>
       {/* {page ?

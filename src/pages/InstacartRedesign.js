@@ -10,7 +10,8 @@ import sketches from '../assets/instacart/sketches.jpg'
 import amazon from '../assets/instacart/amazon.jpg'
 import shipt from '../assets/instacart/shipt.jpg'
 import doordash from '../assets/instacart/doordash.jpg'
-
+import { useState, useEffect } from "react";
+import { getCaseStudy } from '../utils/case-study-fetcher';
 
 
 const h1Style = {
@@ -36,6 +37,12 @@ const pClass = "mb-4"
 const imgClass = "mb-2"
 
 export default function InstacartRedesign() {
+    const [page, setPage] = useState(null);
+    useEffect(() => {
+        const data = getCaseStudy().then(data => setPage(data));
+    }, []);
+    console.log(page);
+    console.log(page.caseStudyCollection.items[0].body.body);
     return (
         <div>
             <div style={{ display: "flex", justifyContent: "center" }}>
