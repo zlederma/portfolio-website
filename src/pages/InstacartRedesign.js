@@ -78,6 +78,14 @@ export default function InstacartRedesign() {
     (page !== null) ? console.log(page) : console.log("not yet");
     console.log(page);
 
+    const getSection = (index) => {
+        if (page !== null) {
+            return <div> Testinggggg</div>
+        }
+        return <div> nope</div>;
+    }
+
+
     return (
         <div>
             <div className="body">
@@ -85,6 +93,7 @@ export default function InstacartRedesign() {
                     <div style={{ minHeight: "100px" }}></div>
 
                     <h1 className={"title text-center display-4"}> {getTitle()} </h1>
+                    {getSection(1)}
                     <Image className={"mb-2 mx-auto d-block"} src={photo_1} style={{ width: "80%" }} />
 
                     <p className="paragraph mb-4">
