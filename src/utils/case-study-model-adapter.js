@@ -12,8 +12,7 @@ const query = `
 }
 `
 export const getCaseStudyModel = () => {
-    let items = {};
-    window
+    return (window
         .fetch(`https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_SPACE_ID}/`, {
             method: "POST",
             headers: {
@@ -29,10 +28,11 @@ export const getCaseStudyModel = () => {
             if (errors) {
                 console.error(errors);
             }
-            items = data.pageCollection.items[0];
-        })
+            return data;
+            // items = data.pageCollection.items[0];
+        }))
 
-    return items;
+    // return items;
 
     // const title = page.title;
     // const logo = page.logo.url;

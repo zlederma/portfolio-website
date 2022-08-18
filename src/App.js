@@ -25,39 +25,26 @@ const query = `
 function App() {
   const [page, setPage] = useState(null);
   useEffect(() => {
-    window
-      .fetch(`https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_SPACE_ID}/`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // Authenticate the request
-          Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
-        },
-        // send the GraphQL query
-        body: JSON.stringify({ query }),
-      })
-      .then((response) => response.json())
-      .then(({ data, errors }) => {
-        if (errors) {
-          console.error(errors);
-        }
+    const data = getCaseStudyModel().then(data => setPage(data.pageCollection.items[0]));
+    // console.log(data);
 
-        //       // rerender the entire component with new data
-        setPage(data.pageCollection.items[0]);
-      });
+    //       // rerender the entire component with new data
+    // setPage(data.pageCollection.items[0]).then();
   }, []);
 
-  if (!page) {
-    return "Loading...";
-  }
+  // if (!page) {
+  //   return "Loading...";
+  // }
+  console.log("here");
+  console.log(page);
   return (
     <div style={{ minWidth: "100vw" }}>
-      <div className="App">
+      {/* <div className="App">
         <header className="App-header">
           <img src={page.logo.url} className="App-logo" alt="logo" />
           <p>{page.title}</p>
         </header>
-      </div>
+      </div> */}
       <Navigation></Navigation>
       <Router>
         <Switch>
