@@ -10,18 +10,6 @@ import Footer from './components/Footer';
 import { useState, useEffect } from "react";
 import { getCaseStudyModel } from './utils/case-study-model-adapter';
 
-const query = `
-{
-  pageCollection {
-    items {
-      title
-      logo {
-        url
-      }
-    }
-  }
-}
-`
 function App() {
   const [page, setPage] = useState(null);
   useEffect(() => {
