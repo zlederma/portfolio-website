@@ -12,7 +12,7 @@ import shipt from '../assets/instacart/shipt.jpg'
 import doordash from '../assets/instacart/doordash.jpg'
 import { useState, useEffect } from "react";
 import { getCaseStudy } from '../utils/case-study-fetcher';
-
+import "./CaseStudyStyles.css"
 
 const h1Style = {
     color: "#c5462c",
@@ -41,18 +41,19 @@ export default function InstacartRedesign() {
     useEffect(() => {
         const data = getCaseStudy().then(data => setPage(data));
     }, []);
-    console.log(page);
-    console.log(page.caseStudyCollection.items[0].body.body);
+    // console.log(page);
+    // console.log(page.caseStudyCollection.items[0].body.body[0].text[0]);
+    // const data = page.caseStudyCollection.items[0].body.body;
     return (
         <div>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-                <div className="mx-4" style={{ maxWidth: "1100px", minHeight: "100vh" }}>
+            <div className="body">
+                <div className="mx-4 container">
                     <div style={{ minHeight: "100px" }}></div>
 
-                    <h1 className={`${h1Class} text-center display-4 `} style={h1Style}> Instacart Redesign </h1>
+                    <h1 className={"title text-center display-4"}> Instacart Redesign </h1>
                     <Image className={`${imgClass} mx-auto d-block`} src={photo_1} style={{ width: "80%" }} />
 
-                    <p className={pClass} style={pStyle}>
+                    <p className="paragraph mb-4">
                         Instacart is an app that allows users to order groceries online and have them delivered to the person’s door. This app has especially gained popularity during COVID-19, and navigating through the app it is clear that the app is well thought out and designed. My team and I wanted to challenge ourselves to discover issues in this app and come up with a solution to help fix issues we found. We this by combing through the app, creating a user testing plan, and then seeing where our users had issues with the app.
                     </p>
                     <h2 className={h2Class} style={h2Style}> Problem </h2>

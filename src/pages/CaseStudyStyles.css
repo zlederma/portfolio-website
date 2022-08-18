@@ -1,0 +1,19 @@
+.body{
+    display: flex; 
+    justify-content: center;
+}
+
+.container{
+    max-width: 1100px;
+    /* min-height: 100vh;  */
+}
+
+.title{
+    color: #c5462c;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+
+.paragraph{
+    font-size: 20px;
+}
