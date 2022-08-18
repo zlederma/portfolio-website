@@ -45,24 +45,56 @@ export default function InstacartRedesign() {
         // const data = page.caseStudyCollection.items[0].body.body;
         //
     }, []);
+
+    const getTitle = () => {
+        if (page !== null) {
+            return page.caseStudyCollection.items[0].body.body[0].headingText;
+        }
+        return "";
+    }
+
+    const getParagraph = (index) => {
+        if (page !== null) {
+            return page.caseStudyCollection.items[0].body.body[index].text[0];
+        }
+        return "";
+    }
+
+
+    const getHeading = (index) => {
+        if (page !== null) {
+            return page.caseStudyCollection.items[0].body.body[index].headingText;
+        }
+        return "";
+    }
+
+    const getImage = (index) => {
+        if (page !== null) {
+            return page.caseStudyCollection.items[0].body.body[index].assets[0].url;
+        }
+        return "";
+    }
+    console.log(getImage(1));
+    (page !== null) ? console.log(page) : console.log("not yet");
     console.log(page);
+
     return (
         <div>
             <div className="body">
                 <div className="mx-4 container">
                     <div style={{ minHeight: "100px" }}></div>
 
-                    <h1 className={"title text-center display-4"}> Instacart Redesign </h1>
+                    <h1 className={"title text-center display-4"}> {getTitle()} </h1>
                     <Image className={"mb-2 mx-auto d-block"} src={photo_1} style={{ width: "80%" }} />
 
                     <p className="paragraph mb-4">
-                        Instacart is an app that allows users to order groceries online and have them delivered to the person’s door. This app has especially gained popularity during COVID-19, and navigating through the app it is clear that the app is well thought out and designed. My team and I wanted to challenge ourselves to discover issues in this app and come up with a solution to help fix issues we found. We this by combing through the app, creating a user testing plan, and then seeing where our users had issues with the app.
+                        {getParagraph(0)}
                     </p>
-                    <h2 className={h2Class} style={h2Style}> Problem </h2>
+                    <h2 className={h2Class} style={h2Style}> {getHeading(1)} </h2>
                     <div>
                         <Row>
                             <Col lg={6} sm={6} xs={6}>
-                                <Image src={problem_image} style={{ width: "100%" }} />
+                                <Image src={getImage(1)} style={{ width: "100%" }} />
                             </Col>
                             <Col lg={6} sm={12} xs={12}>
                                 <p className={pClass} style={pStyle}>
