@@ -1,25 +1,12 @@
-
-// const query = `
-// {
-//   pageCollection {
-//     items {
-//       title
-//       logo {
-//         url
-//       }
-//     }
-//   }
-// }
-// `
 const query = `
 {
-  caseStudyCollection {
-        items {
+    caseStudyCollection(where: { slug: "instacart" }) {
+      items {
         body
-        }
+      }
+    }
   }
-}
-`
+  `
 
 export const getCaseStudyModel = () => {
     return (window
@@ -39,16 +26,5 @@ export const getCaseStudyModel = () => {
                 console.error(errors);
             }
             return data;
-            // items = data.pageCollection.items[0];
         }))
-
-    // return items;
-
-    // const title = page.title;
-    // const logo = page.logo.url;
-    // return items;
-    // if (!page) {
-    //     return "Loading...";
-    // }
-
 }
