@@ -26,25 +26,15 @@ function App() {
   const [page, setPage] = useState(null);
   useEffect(() => {
     const data = getCaseStudyModel().then(data => setPage(data.pageCollection.items[0]));
-    // console.log(data);
-
-    //       // rerender the entire component with new data
-    // setPage(data.pageCollection.items[0]).then();
   }, []);
-
-  // if (!page) {
-  //   return "Loading...";
-  // }
-  console.log("here");
-  console.log(page);
   return (
     <div style={{ minWidth: "100vw" }}>
-      {/* <div className="App">
+      <div className="App">
         <header className="App-header">
           <img src={page.logo.url} className="App-logo" alt="logo" />
           <p>{page.title}</p>
         </header>
-      </div> */}
+      </div>
       <Navigation></Navigation>
       <Router>
         <Switch>
