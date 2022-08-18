@@ -1,16 +1,26 @@
 
+// const query = `
+// {
+//   pageCollection {
+//     items {
+//       title
+//       logo {
+//         url
+//       }
+//     }
+//   }
+// }
+// `
 const query = `
 {
-  pageCollection {
-    items {
-      title
-      logo {
-        url
-      }
-    }
+  caseStudyCollection {
+        items {
+        body
+        }
   }
 }
 `
+
 export const getCaseStudyModel = () => {
     return (window
         .fetch(`https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_SPACE_ID}/`, {

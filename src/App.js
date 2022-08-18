@@ -13,17 +13,18 @@ import { getCaseStudyModel } from './utils/case-study-model-adapter';
 function App() {
   const [page, setPage] = useState(null);
   useEffect(() => {
-    const data = getCaseStudyModel().then(data => setPage(data.pageCollection.items[0]));
+    const data = getCaseStudyModel().then(data => setPage(data));
   }, []);
+  console.log(page);
   return (
     <div style={{ minWidth: "100vw" }}>
-      {page ?
+      {/* {page ?
         <div className="App">
           <header className="App-header">
             <img src={page.logo.url} className="App-logo" alt="logo" />
             <p>{page.title}</p>
           </header>
-        </div> : <div></div>}
+        </div> : <div></div>} */}
       <Navigation></Navigation>
       <Router>
         <Switch>
