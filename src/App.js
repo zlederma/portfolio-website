@@ -17,12 +17,13 @@ function App() {
   }, []);
   return (
     <div style={{ minWidth: "100vw" }}>
-      <div className="App">
-        <header className="App-header">
-          <img src={page.logo.url} className="App-logo" alt="logo" />
-          <p>{page.title}</p>
-        </header>
-      </div>
+      {page ?
+        <div className="App">
+          <header className="App-header">
+            <img src={page.logo.url} className="App-logo" alt="logo" />
+            <p>{page.title}</p>
+          </header>
+        </div> : <div></div>}
       <Navigation></Navigation>
       <Router>
         <Switch>
