@@ -14,27 +14,6 @@ import { useState, useEffect } from "react";
 import { getCaseStudy } from '../utils/case-study-fetcher';
 import "./CaseStudyStyles.css"
 
-const h1Style = {
-    color: "#c5462c",
-    fontWeight: "700",
-    fontFamily: "Roboto",
-
-}
-const h2Style = {
-    color: "rgb(30,30,30)",
-    fontWeight: "600",
-    fontFamily: "Roboto",
-    fontSize: "30px"
-}
-const pStyle = {
-    fontSize: "20px",
-
-}
-//className for paragraph elements
-const h1Class = "mb-2"
-const h2Class = "mb-2 mt-5"
-const pClass = "mb-4"
-const imgClass = "mb-2"
 
 export default function InstacartRedesign() {
     const [page, setPage] = useState(null);
@@ -47,9 +26,28 @@ export default function InstacartRedesign() {
     }, []);
 
     (page !== null) ? console.log(page) : console.log("not yet");
-    const data = page.caseStudyCollection.items[0].body.section[0];
-    console.log(data);
-    const getSection = (index) => {
+    // const data = page.caseStudyCollection.items[0].body.section[0];
+    // console.log(data);
+
+    const showHero = () => {
+        if (page !== null) {
+            const data = page.caseStudyCollection.items[0].body.hero;
+            console.log("this");
+            console.log(data);
+            return (
+                <>
+                    <h1 className={"title text-center display-4"}> {data.headingText} </h1>
+                    <Image className={"mb-2 mx-auto d-block image-80"} src={data.url} />
+
+                    <p className="paragraph mb-4">
+                        {data.text}
+                    </p>
+                </>
+            )
+        }
+        return <div> Loading...</div>;
+    }
+    const showSection = (index) => {
         if (page !== null) {
             const data = page.caseStudyCollection.items[0].body.section[index];
             console.log(data);
@@ -58,11 +56,20 @@ export default function InstacartRedesign() {
                     <h2 className="mb-2 mt-5 heading"> {data.headingText} </h2>
                     <div>
                         <Row>
-                            <Col lg={6} sm={6} xs={12}>
-                                <Image className="image-100" src={data.assets[0].url} />
+                            <Col
+                                lg={data.assets[0].colLarge}
+                                sm={data.assets[0].colSmall}
+                                xs={data.assets[0].colExtraSmall}>
+                                <Image
+                                    className={`image-${data.assets[0].imgWidth}`}
+                                    src={data.assets[0].url} />
                             </Col>
-                            <Col lg={6} sm={6} xs={12}>
-                                <p className={pClass} style={pStyle}>
+                            <Col
+                                lg={data.paragraph.colLarge}
+                                sm={data.paragraph.colSmall}
+                                xs={data.paragraph.colExtraSmall}>
+                                <p
+                                    className="mb-4 paragraph">
                                     {data.paragraph.text[0]}
                                 </p>
                             </Col>
@@ -71,7 +78,7 @@ export default function InstacartRedesign() {
                 </>
             )
         }
-        return <div> nope</div>;
+        return <div> Loading...</div>;
     }
 
 
@@ -81,13 +88,8 @@ export default function InstacartRedesign() {
                 <div className="mx-4 container">
                     <div style={{ minHeight: "100px" }}></div>
 
-                    <h1 className={"title text-center display-4"}> Instacart Redesign </h1>
-                    <Image className={"mb-2 mx-auto d-block"} src={photo_1} style={{ width: "80%" }} />
-
-                    <p className="paragraph mb-4">
-                        asgda
-                    </p>
-                    {getSection(0)}
+                    {showHero()}
+                    {showSection(0)}
                     <div style={{ minHeight: "80px" }}></div>
 
                 </div>
