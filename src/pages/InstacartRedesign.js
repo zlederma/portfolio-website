@@ -46,41 +46,30 @@ export default function InstacartRedesign() {
         //
     }, []);
 
-    const getTitle = () => {
-        if (page !== null) {
-            return page.caseStudyCollection.items[0].body.body[0].headingText;
-        }
-        return "";
-    }
-
-    const getParagraph = (index) => {
-        if (page !== null) {
-            return page.caseStudyCollection.items[0].body.body[index].text[0];
-        }
-        return "";
-    }
-
-
-    const getHeading = (index) => {
-        if (page !== null) {
-            return page.caseStudyCollection.items[0].body.body[index].headingText;
-        }
-        return "";
-    }
-
-    const getImage = (index) => {
-        if (page !== null) {
-            return page.caseStudyCollection.items[0].body.body[index].assets[0].url;
-        }
-        return "";
-    }
-    console.log(getImage(1));
     (page !== null) ? console.log(page) : console.log("not yet");
-    console.log(page);
-
+    const data = page.caseStudyCollection.items[0].body.section[0];
+    console.log(data);
     const getSection = (index) => {
         if (page !== null) {
-            return <div> Testinggggg</div>
+            const data = page.caseStudyCollection.items[0].body.section[index];
+            console.log(data);
+            return (
+                <>
+                    <h2 className="mb-2 mt-5 heading"> {data.headingText} </h2>
+                    <div>
+                        <Row>
+                            <Col lg={6} sm={6} xs={12}>
+                                <Image className="image-100" src={data.assets[0].url} />
+                            </Col>
+                            <Col lg={6} sm={6} xs={12}>
+                                <p className={pClass} style={pStyle}>
+                                    {data.paragraph.text[0]}
+                                </p>
+                            </Col>
+                        </Row>
+                    </div>
+                </>
+            )
         }
         return <div> nope</div>;
     }
@@ -92,26 +81,13 @@ export default function InstacartRedesign() {
                 <div className="mx-4 container">
                     <div style={{ minHeight: "100px" }}></div>
 
-                    <h1 className={"title text-center display-4"}> {getTitle()} </h1>
-                    {getSection(1)}
+                    <h1 className={"title text-center display-4"}> Instacart Redesign </h1>
                     <Image className={"mb-2 mx-auto d-block"} src={photo_1} style={{ width: "80%" }} />
 
                     <p className="paragraph mb-4">
-                        {getParagraph(0)}
+                        asgda
                     </p>
-                    <h2 className={h2Class} style={h2Style}> {getHeading(1)} </h2>
-                    <div>
-                        <Row>
-                            <Col lg={6} sm={6} xs={6}>
-                                <Image src={getImage(1)} style={{ width: "100%" }} />
-                            </Col>
-                            <Col lg={6} sm={12} xs={12}>
-                                <p className={pClass} style={pStyle}>
-                                    Instacart allows users to check out from multiple stores at once, however many of our users found this confusing. How did my team and I utilize established design principles in order to make this feature more seamless for the average user.
-                                </p>
-                            </Col>
-                        </Row>
-                    </div>
+                    {getSection(0)}
                     <div style={{ minHeight: "80px" }}></div>
 
                 </div>

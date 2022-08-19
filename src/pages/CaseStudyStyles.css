@@ -17,3 +17,14 @@
 .paragraph{
     font-size: 20px;
 }
+
+.heading{
+    color: rgb(30,30,30);
+    font-weight: 600;
+    font-family: "Roboto";
+    font-size: 30px;
+}
+
+.image-100{
+    width: 100%; 
+}
