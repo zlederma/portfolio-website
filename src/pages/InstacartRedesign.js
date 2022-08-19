@@ -22,7 +22,6 @@ export default function InstacartRedesign() {
     }, []);
 
     (page !== null) ? console.log(page) : console.log("not yet");
-
     const showHero = () => {
         if (page !== null) {
             const data = page.caseStudyCollection.items[0].body.hero;
@@ -41,6 +40,54 @@ export default function InstacartRedesign() {
         }
         return <div> Loading...</div>;
     }
+
+    let rowSpace = 0;
+    let count = 0; //keeps track of how many total elements there are to render
+    const showRow = (data) => {
+        const cols = [];
+        while (rowSpace < 12 && count < data.order.length) {
+            if (data.order[count] === 0) {
+                cols.push(
+                    <Col
+                        lg={data.paragraph.colLarge}
+                        sm={data.paragraph.colSmall}
+                        xs={data.paragraph.colExtraSmall}>
+                        <p
+                            className="mb-4 paragraph">
+                            {data.paragraph.text[0]}
+                        </p>
+                    </Col>)
+            }
+            if (data.order[count] === 1) {
+                cols.push(
+                    <Col
+                        lg={data.assets[0].colLarge}
+                        sm={data.assets[0].colSmall}
+                        xs={data.assets[0].colExtraSmall}>
+                        <Image
+                            className={`image-${data.assets[0].imgWidth}`}
+                            src={data.assets[0].url} />
+                    </Col>)
+            }
+            rowSpace += data.size[count];
+            count++;
+        }
+        rowSpace = 0;
+        return cols;
+    }
+
+    const showRows = (data) => {
+        const rows = [];
+        while (count < data.order.length) {
+            rows.push(
+                <Row>
+                    {showRow(data)}
+                </Row>
+            )
+        }
+        return rows;
+    }
+
     const showSection = (index) => {
         if (page !== null) {
             const data = page.caseStudyCollection.items[0].body.section[index];
@@ -49,30 +96,22 @@ export default function InstacartRedesign() {
                 <>
                     <h2 className="mb-2 mt-5 heading"> {data.headingText} </h2>
                     <div>
-                        <Row>
-                            <Col
-                                lg={data.assets[0].colLarge}
-                                sm={data.assets[0].colSmall}
-                                xs={data.assets[0].colExtraSmall}>
-                                <Image
-                                    className={`image-${data.assets[0].imgWidth}`}
-                                    src={data.assets[0].url} />
-                            </Col>
-                            <Col
-                                lg={data.paragraph.colLarge}
-                                sm={data.paragraph.colSmall}
-                                xs={data.paragraph.colExtraSmall}>
-                                <p
-                                    className="mb-4 paragraph">
-                                    {data.paragraph.text[0]}
-                                </p>
-                            </Col>
-                        </Row>
+                        {showRows(data)}
                     </div>
                 </>
             )
         }
         return <div> Loading...</div>;
+    }
+
+    const showSections = () => {
+        const sections = [];
+        for (let i = 0; i < 2; i++) {
+            sections.push(showSection(i))
+            count = 0;
+            rowSpace = 0;
+        }
+        return sections;
     }
 
 
@@ -81,9 +120,8 @@ export default function InstacartRedesign() {
             <div className="body">
                 <div className="mx-4 container">
                     <div style={{ minHeight: "100px" }}></div>
-
                     {showHero()}
-                    {showSection(0)}
+                    {showSections()}
                     <div style={{ minHeight: "80px" }}></div>
 
                 </div>
