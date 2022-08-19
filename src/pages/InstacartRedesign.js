@@ -65,7 +65,7 @@ export default function InstacartRedesign() {
                         sm={data.assets[0].colSmall}
                         xs={data.assets[0].colExtraSmall}>
                         <Image
-                            className={`image-${data.assets[0].imgWidth}`}
+                            className={`image-${data.assets[0].imgWidth} ${data.assets[0].class}`}
                             src={data.assets[0].url} />
                     </Col>)
             }
@@ -123,7 +123,6 @@ export default function InstacartRedesign() {
                     {showHero()}
                     {showSections()}
                     <div style={{ minHeight: "80px" }}></div>
-
                 </div>
             </div>
             <ProjectCards></ProjectCards>

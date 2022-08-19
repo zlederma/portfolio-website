@@ -32,3 +32,9 @@
 .image-80{
     width: 80%; 
 }
+
+.heuristics{
+    width: 100%;
+    border-left: 3px solid #c5462c;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 3px, rgba(0, 0, 0, 0.24) 0px 1px 3px;
+}
