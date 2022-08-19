@@ -19,15 +19,9 @@ export default function InstacartRedesign() {
     const [page, setPage] = useState(null);
     useEffect(() => {
         const data = getCaseStudy().then(data => setPage(data))
-        // console.log(page);
-        // console.log(page.caseStudyCollection.items[0].body.body[0].text[0]);
-        // const data = page.caseStudyCollection.items[0].body.body;
-        //
     }, []);
 
     (page !== null) ? console.log(page) : console.log("not yet");
-    // const data = page.caseStudyCollection.items[0].body.section[0];
-    // console.log(data);
 
     const showHero = () => {
         if (page !== null) {
