@@ -109,10 +109,15 @@ export const CaseStudyComponent = () => {
         const heroData = page.caseStudyCollection.items[0].body.hero;
         const sectionsData = page.caseStudyCollection.items[0].body.section;
         return (
-            <>
-                {showHero(heroData)}
-                {showSections(sectionsData)}
-            </>
+            <div className="body">
+                <div className="mx-4 container">
+                    <div style={{ minHeight: "100px" }}></div>
+                    {showHero(heroData)}
+                    {showSections(sectionsData)}
+                    <div style={{ minHeight: "80px" }}></div>
+                </div>
+            </div>
+
         )
     }
     return (
