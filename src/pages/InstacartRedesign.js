@@ -13,6 +13,7 @@ import doordash from '../assets/instacart/doordash.jpg'
 import { useState, useEffect } from "react";
 import { getCaseStudy } from '../utils/case-study-fetcher';
 import "./CaseStudyStyles.css"
+import ReactHtmlParser from 'react-html-parser';
 
 
 export default function InstacartRedesign() {
@@ -25,8 +26,6 @@ export default function InstacartRedesign() {
     const showHero = () => {
         if (page !== null) {
             const data = page.caseStudyCollection.items[0].body.hero;
-            console.log("this");
-            console.log(data);
             return (
                 <>
                     <h1 className={"title text-center display-4"}> {data.headingText} </h1>
@@ -43,6 +42,22 @@ export default function InstacartRedesign() {
 
     let rowSpace = 0;
     let count = 0; //keeps track of how many total elements there are to render
+    let textCount = 0;
+
+    const showParagraphs = (data) => {
+        const paragraphs = [];
+        while (data.order[count] === 0) {
+            paragraphs.push(
+                <p
+                    className="mb-4 paragraph">
+                    {ReactHtmlParser(data.paragraph.text[textCount])}
+                </p>
+            )
+            count++;
+            textCount++;
+        }
+        return paragraphs;
+    }
     const showRow = (data) => {
         const cols = [];
         while (rowSpace < 12 && count < data.order.length) {
@@ -52,10 +67,7 @@ export default function InstacartRedesign() {
                         lg={data.paragraph.colLarge}
                         sm={data.paragraph.colSmall}
                         xs={data.paragraph.colExtraSmall}>
-                        <p
-                            className="mb-4 paragraph">
-                            {data.paragraph.text[0]}
-                        </p>
+                        {showParagraphs(data)}
                     </Col>)
             }
             if (data.order[count] === 1) {
@@ -92,6 +104,9 @@ export default function InstacartRedesign() {
         if (page !== null) {
             const data = page.caseStudyCollection.items[0].body.section[index];
             console.log(data);
+            count = 0;
+            rowSpace = 0;
+            textCount = 0;
             return (
                 <>
                     <h2 className="mb-2 mt-5 heading"> {data.headingText} </h2>
@@ -106,10 +121,8 @@ export default function InstacartRedesign() {
 
     const showSections = () => {
         const sections = [];
-        for (let i = 0; i < 2; i++) {
+        for (let i = 0; i < 3; i++) {
             sections.push(showSection(i))
-            count = 0;
-            rowSpace = 0;
         }
         return sections;
     }
@@ -123,6 +136,9 @@ export default function InstacartRedesign() {
                     {showHero()}
                     {showSections()}
                     <div style={{ minHeight: "80px" }}></div>
+                    <p
+                        className="mb-4 paragraph">
+                    </p>
                 </div>
             </div>
             <ProjectCards></ProjectCards>
