@@ -3,17 +3,17 @@ import { getCaseStudy } from './case-study-fetcher';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import { useState, useEffect } from "react";
+import Iframe from 'react-iframe'
 
-let rowSpace = 0;
-let count = 0; //keeps track of how many total elements there are to render
-let textCount = 0;
+let rowSpace = 0; //Keeps track of when content needs to move to the next row
+let count = 0; //Keeps track of how many total elements there are to render
+let textCount = 0; //Helps render multiple paragraphs
 
 const showHero = (data) => {
     return (
         <>
             <h1 className={"title text-center display-4"}> {data.headingText} </h1>
             <Image className={"mb-2 mx-auto d-block image-80"} src={data.url} />
-
             <p className="paragraph mb-4">
                 {data.text}
             </p>
@@ -94,7 +94,7 @@ const showSection = (index, sectionsData) => {
 
 const showSections = (sectionsData) => {
     const sections = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < sectionsData.length; i++) {
         sections.push(showSection(i, sectionsData))
     }
     return sections;
@@ -116,6 +116,6 @@ export const CaseStudyComponent = () => {
         )
     }
     return (
-        <div>Nope</div>
+        <div>Loading...</div>
     )
 }
