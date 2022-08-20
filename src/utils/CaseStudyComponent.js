@@ -100,10 +100,10 @@ const showSections = (sectionsData) => {
     return sections;
 }
 
-export const CaseStudyComponent = () => {
+export const CaseStudyComponent = (slug) => {
     const [page, setPage] = useState(null);
     useEffect(() => {
-        const data = getCaseStudy().then(data => setPage(data))
+        getCaseStudy(slug).then(data => setPage(data))
     }, []);
     if (page !== null) {
         const heroData = page.caseStudyCollection.items[0].body.hero;

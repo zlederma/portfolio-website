@@ -1,14 +1,17 @@
-const query = `
+//Slug is the unique id on each case study in contentful
+export const getCaseStudy = (slug) => {
+  console.log(slug.slug);
+
+  const query = `
 {
-    caseStudyCollection(where: { slug: "instacart" }) {
+    caseStudyCollection(where: { slug: "${slug.slug}" }) {
       items {
         body
       }
     }
   }
   `
-//I could just have this function take in the slug and that is what it would query
-export const getCaseStudy = () => {
+  console.log(query);
   return (window
     .fetch(`https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_SPACE_ID}/`, {
       method: "POST",
