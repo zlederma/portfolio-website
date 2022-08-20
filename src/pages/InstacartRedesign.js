@@ -14,6 +14,7 @@ import { useState, useEffect } from "react";
 import { getCaseStudy } from '../utils/case-study-fetcher';
 import "./CaseStudyStyles.css"
 import ReactHtmlParser from 'react-html-parser';
+import { CaseStudyComponent } from '../utils/CaseStudyComponent';
 
 
 export default function InstacartRedesign() {
@@ -133,8 +134,9 @@ export default function InstacartRedesign() {
             <div className="body">
                 <div className="mx-4 container">
                     <div style={{ minHeight: "100px" }}></div>
-                    {showHero()}
-                    {showSections()}
+                    {/* {showHero()}
+                    {showSections()} */}
+                    <CaseStudyComponent></CaseStudyComponent>
                     <div style={{ minHeight: "80px" }}></div>
                     <p
                         className="mb-4 paragraph">

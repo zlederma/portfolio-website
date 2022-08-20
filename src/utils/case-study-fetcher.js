@@ -7,7 +7,7 @@ const query = `
     }
   }
   `
-
+//I could just have this function take in the slug and that is what it would query
 export const getCaseStudy = () => {
   return (window
     .fetch(`https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_SPACE_ID}/`, {
