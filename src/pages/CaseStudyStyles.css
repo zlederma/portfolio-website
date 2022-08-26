@@ -25,6 +25,13 @@
     font-size: 30px;
 }
 
+.subheading{
+    color: rgb(40, 40, 40);
+    font-weight: 600;
+    font-family: "Roboto";
+    font-size: 25px;
+}
+
 .image-100{
     width: 100%; 
 }

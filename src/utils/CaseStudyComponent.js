@@ -50,7 +50,6 @@ const showElements = (elementsData) => {
 }
 
 const showCol = (colData) => {
-    // console.log(colData)
     return (
         <Col lg={colData.lg} sm={colData.sm} xs={colData.xs}>
             {showElements(colData.elem)}
@@ -59,8 +58,6 @@ const showCol = (colData) => {
 }
 
 const showCols = (colsData) => {
-    // console.log("here")
-    // console.log(colsData)
     let cols = [];
     for (let i = 0; i < colsData.length; i++) {
         cols.push(showCol(colsData[i]));
@@ -79,6 +76,7 @@ const showRow = (rowData) => {
 }
 
 const showRows = (rowsData) => {
+    console.log(rowsData)
     let rows = [];
     for (let i = 0; i < rowsData.length; i++) {
         rows.push(showRow(rowsData[i]));
@@ -90,7 +88,12 @@ const showSection = (sectionData) => {
     return (
         <>
             {/* Add something for heading and something for subheading */}
-            <h2 className="mb-2 mt-5 heading"> {sectionData.headingText} </h2>
+            {sectionData.headingText ?
+                <h2 className="mb-2 mt-5 heading">
+                    {sectionData.headingText} </h2> : <></>}
+            {sectionData.subHeadingText ?
+                <h3 className="mb-2 subheading">
+                    {sectionData.subHeadingText} </h3> : <></>}
             <div>
                 {showRows(sectionData.row)}
             </div>
@@ -101,7 +104,7 @@ const showSection = (sectionData) => {
 
 const showSections = (sectionsData) => {
     let sections = [];
-    for (let i = 0; i < sectionsData.length; i++) {
+    for (let i = 0; i < sectionsData.section.length; i++) {
         sections.push(showSection(sectionsData.section[i]))
     }
     return sections;
@@ -126,8 +129,7 @@ export const CaseStudyComponent = (slug) => {
                 <div className="mx-4 container">
                     <div style={{ minHeight: "100px" }}></div>
                     {showHero(heroData)}
-                    {showSection(sectionsData.section[0])}
-                    {/* {showSections(sectionsData)} */}
+                    {showSections(sectionsData)}
                     <div style={{ minHeight: "80px" }}></div>
                 </div>
             </div>
