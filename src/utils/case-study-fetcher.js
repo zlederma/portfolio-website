@@ -6,7 +6,8 @@ export const getCaseStudy = (slug) => {
 {
     caseStudyCollection(where: { slug: "${slug.slug}" }) {
       items {
-        body
+        hero
+        sections
       }
     }
   }
