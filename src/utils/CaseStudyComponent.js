@@ -120,8 +120,6 @@ export const CaseStudyComponent = (slug) => {
     if (page !== null) {
         const heroData = page.caseStudyCollection.items[0].hero;
         const sectionsData = page.caseStudyCollection.items[0].sections;
-        // console.log(sectionsData);
-        // console.log(sectionsData.section[1].row[1]);
         return (
             <div className="body">
                 <div className="mx-4 container">
