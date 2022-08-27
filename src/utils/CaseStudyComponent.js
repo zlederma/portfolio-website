@@ -27,7 +27,7 @@ const showElement = (elementData) => {
     if (elementData.type === "I") {
         return (
             <Image
-                className={elementData.class}
+                className={`${elementData.class} mb-4`}
                 src={elementData.value} />
         )
     }
@@ -36,6 +36,8 @@ const showElement = (elementData) => {
             <Iframe
                 className={elementData.class}
                 src={elementData.value}
+                width={elementData.width}
+                height={elementData.height}
                 allowFullScreen />
         )
     }
@@ -67,16 +69,14 @@ const showCols = (colsData) => {
 }
 
 const showRow = (rowData) => {
-    console.log(rowData)
     return (
-        <Row>
+        <Row className={rowData.rowClass}>
             {showCols(rowData.col)}
         </Row>
     )
 }
 
 const showRows = (rowsData) => {
-    console.log(rowsData)
     let rows = [];
     for (let i = 0; i < rowsData.length; i++) {
         rows.push(showRow(rowsData[i]));
@@ -89,7 +89,7 @@ const showSection = (sectionData) => {
         <>
             {/* Add something for heading and something for subheading */}
             {sectionData.headingText ?
-                <h2 className="mb-2 mt-5 heading">
+                <h2 className="mb-2 mt-2 heading">
                     {sectionData.headingText} </h2> : <></>}
             {sectionData.subHeadingText ?
                 <h3 className="mb-2 subheading">
@@ -116,9 +116,7 @@ export const CaseStudyComponent = (slug) => {
     useEffect(() => {
         getCaseStudy(slug).then(data => setPage(data))
     }, []);
-    if (page !== null) {
-        // console.log(page);
-    }
+    console.clear();
     if (page !== null) {
         const heroData = page.caseStudyCollection.items[0].hero;
         const sectionsData = page.caseStudyCollection.items[0].sections;
