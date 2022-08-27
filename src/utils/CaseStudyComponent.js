@@ -115,7 +115,7 @@ export const CaseStudyComponent = (slug) => {
     const [page, setPage] = useState(null);
     useEffect(() => {
         getCaseStudy(slug).then(data => setPage(data))
-    }, []);
+    }, [slug]);
     console.clear();
     if (page !== null) {
         const heroData = page.caseStudyCollection.items[0].hero;
