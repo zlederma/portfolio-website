@@ -3,7 +3,6 @@ import { Card, Row, Col } from "react-bootstrap"
 import instacartLogo from '../assets/instacart-logo.png'
 import blanketLogo from '../assets/blanket-logo.png'
 import portfolio_ception_logo from '../assets/portfolio_ception_logo.jpg'
-import ProjectCard from './ProjectCard'
 
 
 const cardTitles = ["Temperature Blanket", "Instacart Redesign", "Portfolioception"];
@@ -21,9 +20,17 @@ export default function ProjectCards() {
                     <Row xs={1} md={2} lg={3} className="g-4">
                         {Array.from({ length: 3 }).map((_, idx) => (
                             <Col>
-                                <ProjectCard link={links[idx]}
-                                    title={cardTitles[idx]}
-                                    image={images[idx]} />
+                                <Card className="m-3" style={{ height: "300px", width: "300px", boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}>
+                                    {/* makes the entire card clickable */}
+                                    <a href={links[idx]} class="stretched-link"></a>
+                                    <Card.Body>
+                                        <Card.Title className="my-2" style={{ textAlign: "center" }}>{cardTitles[idx]}</Card.Title>
+                                        <div style={{ display: "flex", justifyContent: "space-around" }}>
+                                            <Card.Img className="mt-4" style={{ maxWidth: "150px", maxHeight: "150px" }}
+                                                variant="top" src={images[idx]} />
+                                        </div>
+                                    </Card.Body>
+                                </Card>
                             </Col>
                         ))}
                     </Row>
