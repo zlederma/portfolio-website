@@ -7,24 +7,10 @@ import InstacartRedesign from './pages/InstacartRedesign';
 import PortfolioCeption from './pages/PortfolioCeption';
 import './App.css';
 import Footer from './components/Footer';
-import { useState, useEffect } from "react";
-import { getCaseStudyModel } from './utils/case-study-fetcher';
 
 function App() {
-  // const [page, setPage] = useState(null);
-  // useEffect(() => {
-  //   const data = getCaseStudyModel().then(data => setPage(data));
-  // }, []);
-  // console.log(page);
   return (
     <div style={{ minWidth: "100vw" }}>
-      {/* {page ?
-        <div className="App">
-          <header className="App-header">
-            <img src={page.logo.url} className="App-logo" alt="logo" />
-            <p>{page.title}</p>
-          </header>
-        </div> : <div></div>} */}
       <Navigation></Navigation>
       <Router>
         <Switch>
