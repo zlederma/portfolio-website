@@ -6,7 +6,7 @@ import portfolio_ception_logo from '../assets/portfolio_ception_logo.jpg'
 import ProjectCard from './ProjectCard'
 import "./CardStyles.css"
 
-
+//Change this to be controlled from CMS
 const cardTitles = ["Temperature Blanket", "Instacart Redesign", "Portfolioception"];
 const images = [blanketLogo, instacartLogo, portfolio_ception_logo];
 const links = ["/projects/temperature-blanket", "/projects/instacart-redesign", "/projects/portfolioception"]
