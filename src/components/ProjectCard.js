@@ -2,9 +2,9 @@ import { Card } from "react-bootstrap";
 import React from 'react';
 export default function ProjectCard({ link, title, image }) {
     return (
-        <Card className="m-3" style={{ height: "300px", width: "300px", boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}>
+        <Card className="" style={{ height: "300px", boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}>
             {/* makes the entire card clickable */}
-            <a href={link} class="stretched-link"></a>
+            <a href={link} className="stretched-link"></a>
             <Card.Body>
                 <Card.Title
                     className="my-2"

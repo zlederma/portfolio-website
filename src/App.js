@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div style={{ minWidth: "100vw" }}>
+    <div>
       <Navigation></Navigation>
       <Router>
         <Switch>
