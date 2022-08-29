@@ -38,6 +38,8 @@ const showElement = (elementData) => {
                 src={elementData.value}
                 width={elementData.width}
                 height={elementData.height}
+                sandbox=''
+                loading="lazy"
                 allowFullScreen />
         )
     }
