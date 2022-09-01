@@ -7,7 +7,7 @@ import "./CaseStudyStyles.css";
 export default function InstacartRedesign() {
     return (
         <>
-            <CaseStudyComponent slug="instacart" />
+            <CaseStudyComponent slug="triton-jam" />
             <ProjectCards />
         </>
     )
