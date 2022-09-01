@@ -28,6 +28,7 @@ export default function Navigation() {
                             {/* <Nav.Link href="/"> Projects </Nav.Link> */}
                             {/* When I get more projects replace this with a link to all the projects. And then on the homepage have a featured project section. */}
                             <NavDropdown title="Projects" id="collasible-nav-dropdown">
+                                <NavDropdown.Item className="my-dropdown-item" href="/projects/triton-jam">Triton Jam</NavDropdown.Item>
                                 <NavDropdown.Item className="my-dropdown-item" href="/projects/temperature-blanket">Temperature Blanket</NavDropdown.Item>
                                 <NavDropdown.Item className="my-dropdown-item" href="/projects/instacart-redesign">Instacart Redesign</NavDropdown.Item>
                                 <NavDropdown.Item className="my-dropdown-item" href="/projects/portfolioception">Portfolioception</NavDropdown.Item>
