@@ -14,6 +14,39 @@ const cardTitles = ["Triton Jam", "Temperature Blanket", "Instacart Redesign", "
 const images = [triton_jam_logo, blanketLogo, instacartLogo, portfolio_ception_logo];
 const links = ["/projects/triton-jam", "/projects/temperature-blanket", "/projects/instacart-redesign", "/projects/portfolioception"]
 
+const showCard = (cardData) => {
+    return (
+        <ProjectCard
+            title={cardData.title}
+            image={cardData.image}
+            link={cardData.link} />
+    )
+}
+
+const showColumn = (cardData, lg, sm) => {
+    return (
+        <Col xs={12} sm={sm} lg={lg}>
+            {showCard(cardData)}
+        </Col>
+    )
+}
+
+const showColumns = (cardsData) => {
+    let columns = [];
+    for (let i = 0; i < cardsData.length; i++) {
+        columns.push(showColumn(cardsData[i], 4, 12))
+    }
+    return columns;
+}
+
+const showGrid = (cardsData) => {
+    return (
+        <Row className="g-4">
+            {showColumns(cardsData)}
+        </Row>
+    )
+}
+
 export default function ProjectCards() {
     const [page, setPage] = useState(null);
     useEffect(() => {
@@ -21,26 +54,20 @@ export default function ProjectCards() {
     }, []);
     // console.clear();
     if (page !== null) {
-        // const heroData = page.caseStudyCollection.items[0].hero;
-        // const sectionsData = page.caseStudyCollection.items[0].sections;
-        console.log(page);
+        const cardsData = page.cardsCollection.items[0].cards.cards;
+        console.log(cardsData);
+
+        return (
+            <div style={{ border: "1px solid lightgray" }}>
+                <div className="card__container">
+                    <div className="p-4" style={{ width: "1100px" }}>
+                        {showGrid(cardsData)}
+                    </div>
+                </div>
+            </div >
+        )
     }
     return (
-        <div>test</div>
-        // <div style={{ border: "1px solid lightgray" }}>
-        //     <div className="card__container">
-        //         <div className="p-4" style={{ width: "1100px" }}>
-        //             <Row className="g-4" xs={1} md={1} lg={3}>
-        //                 {Array.from({ length: 4 }).map((_, idx) => (
-        //                     <Col>
-        //                         <ProjectCard link={links[idx]}
-        //                             title={cardTitles[idx]}
-        //                             image={images[idx]} />
-        //                     </Col>
-        //                 ))}
-        //             </Row>
-        //         </div>
-        //     </div>
-        // </div >
+        <div>loading...</div>
     )
 }
