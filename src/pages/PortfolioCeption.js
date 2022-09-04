@@ -86,7 +86,7 @@ export default function PortfolioCeption() {
                 </div>
 
             </div >
-            <ProjectCards></ProjectCards>
+            <ProjectCards slug="portfolioception" />
         </div>
     )
 }

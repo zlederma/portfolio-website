@@ -115,7 +115,7 @@ export default function TemperatureBlanket() {
                     <div style={{ minHeight: "80px" }}></div>
                 </div>
             </div >
-            <ProjectCards></ProjectCards>
+            <ProjectCards slug="temperature-blanket" />
         </div>
     )
 }

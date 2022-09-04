@@ -8,7 +8,7 @@ export default function InstacartRedesign() {
     return (
         <>
             <CaseStudyComponent slug="triton-jam" />
-            <ProjectCards />
+            <ProjectCards slug="triton-jam" />
         </>
     )
 }

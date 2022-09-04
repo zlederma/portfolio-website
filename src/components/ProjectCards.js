@@ -9,11 +9,6 @@ import "./CardStyles.css"
 import { getProjectCards } from '../utils/project-cards-fetcher'
 import { useState, useEffect } from "react"
 
-//Change this to be controlled from CMS
-const cardTitles = ["Triton Jam", "Temperature Blanket", "Instacart Redesign", "Portfolioception"];
-const images = [triton_jam_logo, blanketLogo, instacartLogo, portfolio_ception_logo];
-const links = ["/projects/triton-jam", "/projects/temperature-blanket", "/projects/instacart-redesign", "/projects/portfolioception"]
-
 const showCard = (cardData) => {
     return (
         <ProjectCard
@@ -31,10 +26,32 @@ const showColumn = (cardData, lg, sm) => {
     )
 }
 
+const calculateLgColLength = (length, index) => {
+    if (length % 3 === 1 && index === length - 1) {
+        return 12;
+    }
+    if (length % 3 === 2 && index >= length - 2) {
+        return 6;
+    }
+    return 4;
+}
+
+const calculateSmColLength = (length, index) => {
+    if (length % 2 === 1 && index === length - 1) {
+        return 12;
+    }
+
+    return 6;
+}
+
 const showColumns = (cardsData) => {
     let columns = [];
+    let lg = 4; //default lg value
+    let sm = 6;
     for (let i = 0; i < cardsData.length; i++) {
-        columns.push(showColumn(cardsData[i], 4, 12))
+        lg = calculateLgColLength(cardsData.length, i);
+        sm = calculateSmColLength(cardsData.length, i)
+        columns.push(showColumn(cardsData[i], lg, sm))
     }
     return columns;
 }
@@ -47,12 +64,12 @@ const showGrid = (cardsData) => {
     )
 }
 
-export default function ProjectCards() {
+export default function ProjectCards(slug) {
     const [page, setPage] = useState(null);
     useEffect(() => {
-        getProjectCards().then(data => setPage(data))
+        getProjectCards(slug).then(data => setPage(data))
     }, []);
-    // console.clear();
+    console.clear();
     if (page !== null) {
         const cardsData = page.cardsCollection.items[0].cards.cards;
         console.log(cardsData);

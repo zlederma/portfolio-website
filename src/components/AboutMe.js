@@ -43,7 +43,7 @@ export default function AboutMe() {
                                 <p className={pClass} style={pStyle}>
                                     Human centered design is especially important in an increasingly digital world. This is one of the aspects of design I am passionate about. Taking what I have learned about how humans think; such as how we process information, cognitive biases, and heuristics, in order to create a user-friendly design. I am good at connecting ideas and looking at the whole picture in a design challenge, while still remaining detail-oriented.</p>
                             </Col>
-                            <Col lg={6} sm={6} xs={6}>
+                            <Col lg={6} sm={8} xs={12}>
                                 <Image className={imgClass} src={climbingPhoto} style={{ width: "100%" }} />
                             </Col>
                         </Row>

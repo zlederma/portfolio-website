@@ -15,7 +15,7 @@ export default function Home() {
             </div>
 
 
-            <ProjectCards></ProjectCards>
+            <ProjectCards slug="master" />
             <AboutMe></AboutMe>
         </div>
     )

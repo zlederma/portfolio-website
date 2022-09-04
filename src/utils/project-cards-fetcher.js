@@ -1,10 +1,10 @@
 //Slug is the unique id on each case study in contentful
-export const getProjectCards = () => {
+export const getProjectCards = (slug) => {
     // console.log(slug.slug);
 
     const query = `
   {
-      cardsCollection(where: { slug: "master" }) {
+      cardsCollection(where: { slug: "${slug.slug}" }) {
         items {
           cards
         }

@@ -8,7 +8,7 @@ export default function InstacartRedesign() {
     return (
         <>
             <CaseStudyComponent slug="instacart" />
-            <ProjectCards />
+            <ProjectCards slug="instacart" />
         </>
     )
 }
