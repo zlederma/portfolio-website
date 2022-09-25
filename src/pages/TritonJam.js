@@ -1,6 +1,5 @@
-import React from 'react';
-import ProjectCards from '../components/ProjectCards';
 import { CaseStudyComponent } from '../utils/CaseStudyComponent';
+import ProjectCards from '../components/ProjectCards';
 import "./CaseStudyStyles.css";
 
 
