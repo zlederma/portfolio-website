@@ -1,10 +1,12 @@
 import React from 'react'
 import background from '../assets/home-background-3.png'
+import './WelcomeStyles.css'
+import ArtSquares from './ArtSquares'
 
 export default function Welcome() {
     return (
 
-        <div style={{
+        <div className="welcome__container" style={{
             minWidth: "100vw",
             height: "65vh",
             backgroundImage: `url(${background})`,
@@ -22,6 +24,7 @@ export default function Welcome() {
                         fully focused on <br />fabricating the  finest experience</h2>
                 </div>
             </div>
+            <div className="welcome__art-squares-container"><ArtSquares /></div>
         </div >
 
     )

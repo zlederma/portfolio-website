@@ -1,0 +1,9 @@
+.welcome__container{
+border: 2px solid red;
+}
+
+.welcome__art-squares-container{
+    border: 2px solid red;
+    position: relative;
+    top: -150px;
+}

@@ -1,0 +1,11 @@
+.art-square__container{
+    border: 1px solid lightgray;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    padding-top: 3px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+
+}

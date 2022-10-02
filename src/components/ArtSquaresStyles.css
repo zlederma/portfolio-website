@@ -1,0 +1,5 @@
+.art-squares__container{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(5vw, 5vw) );
+    justify-content: center;
+}
