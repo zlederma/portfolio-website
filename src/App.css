@@ -16,6 +16,15 @@ body .nav-link {
     text-decoration-color: #f2d3ce !important;
 }
 
+:active.nav-link {
+    color: #e5ada4 !important;
+    text-decoration-color: #e5ada4 !important; 
+}
+
+.nav-link svg:active {
+    fill: #e5ada4 !important;
+}
+
 :hover.icon {
     color: #f2d3ce !important;
 }
@@ -25,8 +34,8 @@ body .nav-link {
     background-color: #f2d3ce !important;
 }
 
-:active.nav-link {
-    color: #f2d3ce !important;
+.name-icon-div:active{
+    background-color: #e5ada4 !important;
 }
 
 
@@ -38,18 +47,12 @@ body .nav-link {
 }
 
 :hover.card {
-    /* opacity: .5; */
-    /* filter: blur(2px); */
-    /* background-color: #f2d3ce !important; */
     border: 2px solid lightgrey;
     z-index: 2 !important;
 }
 
 :active.card {
-    /* opacity: .5; */
     border: 2px solid lightgrey;
-    /* filter: blur(2px); */
-    /* background-color: lightgrey !important; */
     z-index: 2 !important;
 }
 

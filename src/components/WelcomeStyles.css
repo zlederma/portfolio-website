@@ -1,11 +1,16 @@
-.welcome__container{
-    width: 100vw;
+.welcome__background-container{
     height: 65vh;
     background-image: url('../assets/home-background-3.png');
     background-position: right top;
     background-size: contain;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome__container{
+    width: 1100px;
 }
 
 .welcome__intro-container{
@@ -25,5 +30,6 @@
 
 .welcome__tagline{
     font-size: 20px;
+    font-weight: 500;
     color: rgba(0,0,0,.9);
 }
