@@ -1,9 +1,29 @@
 .welcome__container{
-    min-width: 100vw;
+    width: 100vw;
     height: 65vh;
     background-image: url('../assets/home-background-3.png');
     background-position: right top;
     background-size: contain;
     background-attachment: fixed;
-    background-repeat: 'no-repeat';
+    background-repeat: no-repeat;
+}
+
+.welcome__intro-container{
+    display: inline-block;
+    position: sticky;
+    top: 100px;
+    padding: 20px;
+}
+
+.welcome__intro{
+    font-family: "Roboto"; 
+    font-size: 60px; 
+    font-weight: 900;
+    letter-spacing: 0px;
+    line-height: 60px;
+}
+
+.welcome__tagline{
+    font-size: 20px;
+    color: rgba(0,0,0,.9);
 }
