@@ -2,10 +2,14 @@
     background-color: #f5eae9;
     display: flex;
     justify-content: center;
+    min-height: calc(100vh - 118px);
 }
 
 .about-me__container{
-    max-width: 1100px
+    max-width: 1100px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .about-me__heading{
