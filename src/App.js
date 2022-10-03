@@ -8,6 +8,7 @@ import InstacartRedesign from './pages/InstacartRedesign';
 import PortfolioCeption from './pages/PortfolioCeption';
 import './App.css';
 import Footer from './components/Footer';
+import ArtSquares from './components/ArtSquares';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         </Switch>
       </Router>
       <Footer />
+      <ArtSquares />
     </>
   )
 }
