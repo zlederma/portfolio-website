@@ -5,7 +5,7 @@ export default function Welcome() {
 
         <div className="welcome__container">
             <div className="welcome__intro-container">
-                <div className="welcome__intro"> Hi It's Zoe,</div>
+                <div className="welcome__heading"> Hi It's Zoe,</div>
                 <div className="welcome__tagline">
                     I'm a Frontend Developer
                     <br />fully focused on figuring out how to <br />
