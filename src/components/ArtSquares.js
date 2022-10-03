@@ -4,7 +4,7 @@ import React from 'react'
 
 const showSquares = () => {
     let squares = [];
-    for (let i = 0; i < 300; i++) {
+    for (let i = 0; i < 260; i++) {
         squares.push(<ArtSquare />)
     }
     return squares;
