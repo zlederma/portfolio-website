@@ -8,11 +8,9 @@ export default function Technology(props) {
     //if there is a link there is a button
     if (link !== "") {
         return (
-            <a href={link} target="blank">
-                <div className="technology__button-container">
-                    <img className='technology__image' src={image} />
-                    <div className='technology__title'> {technology}</div>
-                </div>
+            <a href={link} target="blank" className="technology__button-container">
+                <img className='technology__image' src={image} />
+                <div className='technology__title'> {technology}</div>
             </a>
         )
     }
