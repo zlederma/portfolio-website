@@ -6,8 +6,8 @@ import "./CaseStudyStyles.css";
 export default function BookApp() {
     return (
         <>
-            {/* <CaseStudyComponent slug="instacart" /> */}
-            <ProjectCards slug="instacart" />
+            <CaseStudyComponent slug="book-app" />
+            <ProjectCards slug="book-app" />
         </>
     )
 }
