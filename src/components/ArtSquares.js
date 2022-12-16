@@ -6,7 +6,7 @@ export default function ArtSquares() {
     }
     const showSquares = () => {
         let squares = []
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 143; i++) {
             squares.push(showSquare());
         }
         return squares

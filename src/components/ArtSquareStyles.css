@@ -1,0 +1,12 @@
+.art-square__container{
+    display: inline-block;
+    font-size: 50px;
+    width: 100px;
+    height: 5vh;
+    text-align: center;
+    line-height: 5vh;
+}
+
+.art-square__square{
+    margin: auto;
+}
