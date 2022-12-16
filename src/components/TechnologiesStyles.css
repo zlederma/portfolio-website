@@ -1,0 +1,9 @@
+.technologies__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

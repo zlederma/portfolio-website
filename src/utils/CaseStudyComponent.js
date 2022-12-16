@@ -4,12 +4,14 @@ import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import { useState, useEffect } from "react";
 import Iframe from 'react-iframe';
+import Technologies from '../components/Technologies';
 
 const showHero = (data) => {
     return (
         <>
             <h1 className={"title text-center display-4"}> {data.headingText} </h1>
             <Image className={"mb-2 mx-auto d-block image-80"} src={data.src} />
+            {data.technologies ? <Technologies data={data.technologies} /> : <></>}
             <p className="paragraph mb-4">
                 {data.text}
             </p>
