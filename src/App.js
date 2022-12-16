@@ -9,8 +9,15 @@ import PortfolioCeption from './pages/PortfolioCeption';
 import BookApp from './pages/BookApp';
 import './App.css';
 import Footer from './components/Footer';
+import { useEffect } from 'react';
+import ReactGA from 'react-ga';
+const TRACKING_ID = "UA-206521384-1"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
   return (
     <>
       <Navigation></Navigation>
