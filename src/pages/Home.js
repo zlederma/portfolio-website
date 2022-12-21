@@ -8,7 +8,6 @@ export default function Home() {
     return (
         <>
             <Welcome></Welcome>
-            <ProjectCards slug="master" />
             <AboutMe></AboutMe>
         </>
     )
