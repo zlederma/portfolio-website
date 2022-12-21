@@ -1,5 +1,4 @@
-import "./TechnologyStyles.css"
-import jsLogo from '../assets/javascript-logo.png'
+import "../styles/TechnologyStyles.css"
 export default function Technology(props) {
     const technology = props.data ? props.data.technology : "";
     const image = props.data ? props.data.image : "";

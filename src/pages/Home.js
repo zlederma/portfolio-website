@@ -1,9 +1,5 @@
-import React from 'react'
-import Welcome from '../components/Welcome'
-import ProjectCards from '../components/ProjectCards'
 import AboutMe from '../components/AboutMe'
 import Landing from '../components/Landing'
-
 
 export default function Home() {
     return (

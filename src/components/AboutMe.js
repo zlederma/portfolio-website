@@ -1,6 +1,6 @@
 import { Image, Row, Col } from 'react-bootstrap'
 import climbingPhoto from '../assets/climbing-photo.jpeg'
-import './AboutMeStyles.css'
+import '../styles/AboutMeStyles.css'
 
 export default function AboutMe() {
     return (

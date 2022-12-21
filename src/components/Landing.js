@@ -1,4 +1,4 @@
-import "./LandingStyles.css"
+import "../styles/LandingStyles.css"
 import ProjectCards from "./ProjectCards"
 import Welcome from "./Welcome"
 export default function () {

@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Footer() {
     return (
         <div style={{ border: "1px solid lightgray", minWidth: "100vw", backgroundColor: "#f5eae9", display: "flex", justifyContent: "center", alignContent: "center" }}>

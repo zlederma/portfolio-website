@@ -1,5 +1,4 @@
 import { Card } from "react-bootstrap";
-import React from 'react';
 export default function ProjectCard({ link, title, image }) {
     return (
         <Card className="" style={{ height: "300px", boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}>

@@ -1,4 +1,4 @@
-import './ArtSquareStyles.css'
+import '../styles/ArtSquareStyles.css'
 import { RiBracesFill, RiCodeFill, RiBracketsFill, RiParenthesesFill } from "react-icons/ri";
 export default function ArtSquare() {
     return (

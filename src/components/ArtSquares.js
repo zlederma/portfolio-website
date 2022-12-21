@@ -1,4 +1,4 @@
-import './ArtSquaresStyles.css'
+import '../styles/ArtSquaresStyles.css'
 import ArtSquare from './ArtSquare'
 export default function ArtSquares() {
     const showSquare = () => {

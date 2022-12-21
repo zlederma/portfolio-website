@@ -1,4 +1,4 @@
-import "./TechnologiesStyles.css"
+import "../styles/TechnologiesStyles.css"
 import Technology from "./Technology"
 export default function Technologies(props) {
 

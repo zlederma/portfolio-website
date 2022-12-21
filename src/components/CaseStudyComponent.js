@@ -1,10 +1,11 @@
 import { Image, Row, Col } from 'react-bootstrap';
-import { getCaseStudy } from './case-study-fetcher';
+import { getCaseStudy } from '../utils/case-study-fetcher';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import { useState, useEffect } from "react";
 import Iframe from 'react-iframe';
-import Technologies from '../components/Technologies';
+import Technologies from './Technologies';
+import "../styles/CaseStudyStyles.css";
 
 const showHero = (data) => {
     return (

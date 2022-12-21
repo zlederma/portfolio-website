@@ -1,4 +1,4 @@
-import './WelcomeStyles.css'
+import '../styles/WelcomeStyles.css'
 export default function Welcome() {
     return (
         <div className='welcome__container'>

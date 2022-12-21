@@ -1,11 +1,7 @@
 import React from 'react'
-import { Card, Row, Col } from "react-bootstrap"
-import instacartLogo from '../assets/instacart-logo.png'
-import blanketLogo from '../assets/blanket-logo.png'
-import portfolio_ception_logo from '../assets/portfolio_ception_logo.jpg'
-import triton_jam_logo from '../assets/triton-jam-logo.png'
+import { Row, Col } from "react-bootstrap"
 import ProjectCard from './ProjectCard'
-import "./CardStyles.css"
+import "../styles/CardStyles.css"
 import { getProjectCards } from '../utils/project-cards-fetcher'
 import { useState, useEffect } from "react"
 

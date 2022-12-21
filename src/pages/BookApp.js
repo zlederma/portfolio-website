@@ -1,7 +1,5 @@
 import ProjectCards from '../components/ProjectCards';
-import { CaseStudyComponent } from '../utils/CaseStudyComponent';
-import "./CaseStudyStyles.css";
-
+import { CaseStudyComponent } from '../components/CaseStudyComponent';
 
 export default function BookApp() {
     return (

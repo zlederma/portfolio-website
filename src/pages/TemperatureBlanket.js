@@ -1,14 +1,11 @@
-import React from 'react'
 import ProjectCards from '../components/ProjectCards'
 import { Image, Row, Col } from 'react-bootstrap'
 import jsLogo from '../assets/javascript-logo.png'
 import rLogo from '../assets/react-logo.png'
 import openWeatherLogo from '../assets/open-weather-logo.jpg'
 import tempBlanket1 from '../assets/tempblanket/temp-blanket1.png'
-// import RepoButton from '..assets/RepoButton'
 import RepoButton from '../assets/RepoButton'
 import Technologies from '../assets/tempblanket/technologies.png'
-// import repo from '..components/repo'
 
 const h1Style = {
     color: "#c5462c",
