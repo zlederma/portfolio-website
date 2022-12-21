@@ -1,17 +1,5 @@
-.welcome__background-container{
-    height: 65vh;
-    width: 100vw;
-    /* background-image: url('../assets/home-background-3.png');
-    background-position: right top;
-    background-size: contain;
-    background-attachment: fixed;
-    background-repeat: no-repeat; */
-    display: flex;
-    justify-content: center;
-}
-
 .welcome__container{
-    width: 1100px;
+    height: 100%;
 }
 
 .welcome__intro-container{
