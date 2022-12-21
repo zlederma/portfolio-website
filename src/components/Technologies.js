@@ -1,6 +1,6 @@
 import "../styles/TechnologiesStyles.css"
 import Technology from "./Technology"
-export default function Technologies(props) {
+export default function Technologies({ data }) {
 
     const showTechnologies = (data) => {
         let technologies = [];
@@ -11,7 +11,7 @@ export default function Technologies(props) {
     }
     return (
         <div className="technologies__container">
-            {showTechnologies(props.data)}
+            {showTechnologies(data)}
         </div>
     )
 }

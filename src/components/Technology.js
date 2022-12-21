@@ -1,8 +1,8 @@
 import "../styles/TechnologyStyles.css"
-export default function Technology(props) {
-    const technology = props.data ? props.data.technology : "";
-    const image = props.data ? props.data.image : "";
-    const link = props.data ? props.data.link : "";
+export default function Technology({ data }) {
+    const technology = data ? data.technology : "";
+    const image = data ? data.image : "";
+    const link = data ? data.link : "";
 
     //if there is a link there is a button
     if (link !== "") {
