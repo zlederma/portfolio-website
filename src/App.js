@@ -35,7 +35,6 @@ function App() {
         </Switch>
       </Router>
       <Footer />
-      <ArtSquares />
     </>
   )
 }
