@@ -1,0 +1,8 @@
+.detailed-project-card__container{
+    display: inline-block;
+    min-height: 200px;
+    height: 33%;
+    width: 100%;
+    min-width: 360px;
+    border: 2px solid red;
+}
