@@ -1,3 +1,4 @@
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './components/Navigation';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
@@ -7,7 +8,6 @@ import TemperatureBlanket from './pages/TemperatureBlanket';
 import InstacartRedesign from './pages/InstacartRedesign';
 import PortfolioCeption from './pages/PortfolioCeption';
 import BookApp from './pages/BookApp';
-import './App.css';
 import Footer from './components/Footer';
 
 import ArtSquares from './components/ArtSquares';

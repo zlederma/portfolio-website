@@ -15,7 +15,7 @@ export default function () {
                 </div>
                 <div className="landing__column-projects">
                     {/* //Titles, tags, technologies, project, repository, study */}
-                    <DetailedProjectCards titles={["hi", "2", "3"]} />
+                    <DetailedProjectCards titles={["Clipboard", "Book App", "Portfolio-ception"]} />
                 </div>
             </div>
         </>

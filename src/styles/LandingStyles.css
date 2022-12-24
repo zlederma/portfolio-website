@@ -7,20 +7,22 @@
 .landing__column-art{
     width: 200px;
     min-width: 100px;
-    background-color: rgb(221, 154, 154);
+    /* background-color: rgb(221, 154, 154); */
+    background-color: #e5ada4;
+    /* background-color: #f5eae9; */
     height: 100%;
 }
 .landing__column-welcome{
     width: 360px;
     min-width: 360px;
-    background-color: rgb(165, 205, 165);
+    /* background-color:#e5ada4; */
     height: 100%;
 }
 
 .landing__column-projects{
     width: 600px;
     min-width: 360px;
-    background-color: rgb(168, 168, 196);
+    /* background-color: rgb(168, 168, 196); */
     height: 100%;
 }
 

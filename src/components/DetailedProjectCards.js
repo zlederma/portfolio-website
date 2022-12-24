@@ -4,8 +4,8 @@ import "../styles/DetailedProjectCardsStyles.css"
 export default function DetailedProjectCards({ titles }) {
     function showCards() {
         const cards = [];
-        for (let i = 0; i < data.length; i++) {
-            cards.push(<DetailedProjectCard title={titles[i]} />);
+        for (let i = 0; i < titles.length; i++) {
+            cards.push(<li><DetailedProjectCard title={titles[i]} /></li>);
         }
         return cards;
     }

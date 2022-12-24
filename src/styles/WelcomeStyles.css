@@ -10,8 +10,9 @@
 }
 
 .welcome__heading{
-    font-family: "Roboto"; 
-    font-size: 60px; 
+    /* font-family: "Roboto";  */
+    font-family: 'Playfair Display', serif;
+    font-size: 40px; 
     font-weight: 900;
     letter-spacing: 0px;
     line-height: 60px;

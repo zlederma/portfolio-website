@@ -1,8 +1,14 @@
 .detailed-project-card__container{
     display: inline-block;
     min-height: 200px;
-    height: 33%;
+    height: 30%;
     width: 100%;
     min-width: 360px;
     border: 2px solid red;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.detailed-project-card__title{
+    font-size: 30px;
 }

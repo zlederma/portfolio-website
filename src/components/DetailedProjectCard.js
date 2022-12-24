@@ -2,6 +2,10 @@ import "../styles/DetailedProjectCardStyles.css"
 
 export default function DetailedProjectCard({ title }) {
     return (
-        <li className='detailed-project-card__container'>{title}</li>
+        <div className='detailed-project-card__container'>
+            <div className="detailed-project-card__title">
+                {title}
+            </div>
+        </div>
     )
 }
