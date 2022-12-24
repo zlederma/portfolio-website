@@ -1,10 +1,10 @@
 .art-square__container{
-    display: inline-block;
-    font-size: 50px;
-    width: 100px;
-    height: 5vh;
+    padding-top: 38px;
+    display: block;
+    font-size: 100px;
+    height: 10%;
     text-align: center;
-    line-height: 5vh;
+    line-height: 5%;
 }
 
 .art-square__square{

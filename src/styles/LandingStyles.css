@@ -6,18 +6,20 @@
 
 .landing__column-art{
     width: 200px;
+    min-width: 100px;
     background-color: rgb(221, 154, 154);
     height: 100%;
 }
 .landing__column-welcome{
-    width: 450px;
+    width: 360px;
+    min-width: 360px;
     background-color: rgb(165, 205, 165);
     height: 100%;
 }
 
 .landing__column-projects{
-    min-width: 450px;
-    max-width: 300px;
+    width: 600px;
+    min-width: 360px;
     background-color: rgb(168, 168, 196);
     height: 100%;
 }
