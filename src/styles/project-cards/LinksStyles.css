@@ -1,0 +1,7 @@
+.detailed-project-card__links-container{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: end;
+}

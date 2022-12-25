@@ -1,0 +1,8 @@
+.detailed-project-card___technology-container{
+    display: flex;
+    justify-content: start;
+}
+
+.detailed-project-card___technology-image{
+    height: 30px;
+}

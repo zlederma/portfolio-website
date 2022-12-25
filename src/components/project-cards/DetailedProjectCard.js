@@ -1,5 +1,6 @@
-// import ".../styles/DetailedProjectCardStyles.css"
 import "../../styles/project-cards/DetailedProjectCardStyles.css"
+import Technologies from "./Technologies"
+import Links from "./Links"
 
 export default function DetailedProjectCard({ title }) {
     return (
@@ -11,7 +12,9 @@ export default function DetailedProjectCard({ title }) {
             <div className="detailed-project-card__tag">
                 <li> frontend</li>
             </div>
-            <ul className="detailed-project-card__container-technologies">
+            <Technologies />
+            <Links />
+            {/* <ul className="detailed-project-card__container-technologies">
                 Technologiees
                 <li> Bootstrap</li>
                 <li> JavaScript</li>
@@ -19,7 +22,7 @@ export default function DetailedProjectCard({ title }) {
             <ul className="detailed-project-card__container-links">
                 <li> Repo</li>
                 <li> Project</li>
-            </ul>
+            </ul> */}
         </div>
     )
 }
