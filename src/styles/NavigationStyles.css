@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+#navbar .name-icon-div {
+    background-color: white;
+}
+#navbar .name-icon-div:hover{
+    background-color: #f2d3ce;
+}
+
+#navbar .name-icon-div:active{
+    background-color: #e5ada4;
+}
+
+/* Using id to make these styles more specific and overide bootstrap. */
+#navbar .nav-link {
+    color: white;
+}
+
+#navbar .nav-link:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #f2d3ce;
+}
+
+#navbar :active.nav-link {
+    color: #e5ada4 ;
+    text-decoration-color: #e5ada4; 
+}
+
+#navbar .nav-link svg:active {
+    fill: #e5ada4 ;
+}
+
+#navbar :hover.icon {
+    color: #f2d3ce ;
+}
+
+#navbar :hover.my-dropdown-item {
+    background-color: #f2d3ce;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #f2d3ce;
+}
+
+#navbar :hover.card {
+    border: 2px solid lightgrey;
+    z-index: 2 ;
+}
+
+#navbar:active.card {
+    border: 2px solid lightgrey;
+    z-index: 2 ;
+}
