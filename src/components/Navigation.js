@@ -1,6 +1,6 @@
 //This is the navbar
 //Styling for colors is in App.css
-
+import "../styles/NavigationStyles.css"
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap"
 
 import React from 'react'
@@ -13,20 +13,17 @@ import NameIcon from '../assets/NameIcon';
 export default function Navigation() {
     return (
         <div>
-            <Navbar style={{ background: "rgb(50,50,50)" }} collapseOnSelect expand="md"
-                // bg="dark"
+            <Navbar id="navbar" style={{ background: "rgb(50,50,50)" }} collapseOnSelect expand="md"
                 variant="dark"
                 fixed="top">
                 <Container>
                     <Navbar.Brand href="/"> <div className="name-icon-div"
-                        style={{ paddingTop: "2px", display: "inline-block", height: "40px", width: "40px", borderRadius: "50%", backgroundColor: "white" }}>
+                        style={{ paddingTop: "2px", display: "inline-block", height: "40px", width: "40px", borderRadius: "50%" }}>
                         <NameIcon /> </div></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="/#About">About Me</Nav.Link>
-                            {/* <Nav.Link href="/"> Projects </Nav.Link> */}
-                            {/* When I get more projects replace this with a link to all the projects. And then on the homepage have a featured project section. */}
                             <NavDropdown title="Projects" id="collasible-nav-dropdown">
                                 <NavDropdown.Item className="my-dropdown-item" href="/projects/book-app">Book App</NavDropdown.Item>
                                 <NavDropdown.Item className="my-dropdown-item" href="/projects/triton-jam">Triton Jam</NavDropdown.Item>
