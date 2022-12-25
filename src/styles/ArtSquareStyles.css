@@ -1,12 +1,11 @@
 .art-square__container{
-    padding-top: 38px;
     display: block;
     font-size: 100px;
-    height: 10%;
+    line-height: 80px;
     text-align: center;
-    line-height: 5%;
+    margin: -5px;
 }
 
 .art-square__square{
-    margin: auto;
+
 }
