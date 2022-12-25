@@ -7,7 +7,7 @@ export default function ArtSquares() {
         for (let i = 0; i < 10; i++) {
             squares.push(<ArtSquare bracket={bracket} />);
             bracket++;
-            if (bracket > 3) {
+            if (bracket > 2) {
                 bracket = 0;
             }
 
