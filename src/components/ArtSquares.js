@@ -4,7 +4,7 @@ export default function ArtSquares() {
     const showSquares = () => {
         let bracket = 0;
         let squares = []
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 15; i++) {
             squares.push(<ArtSquare bracket={bracket} />);
             bracket++;
             if (bracket > 2) {
