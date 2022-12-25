@@ -4,7 +4,7 @@ import { useState } from 'react';
 export default function ArtSquare({ bracket }) {
 
     const [fill, setFill] = useState("#fffaf1")
-    const handleMouseEnter = () => {
+    const handleMouseOver = () => {
         switch (bracket) {
             case 0:
                 setFill("#c5462c");
@@ -30,17 +30,17 @@ export default function ArtSquare({ bracket }) {
             case 0:
                 return <RiBracesFill
                     className={className}
-                    fill={fill} onMouseEnter={handleMouseEnter}
+                    fill={fill} onMouseOver={handleMouseOver}
                     onMouseLeave={handleMouseLeave} />
             case 1:
                 return <RiCodeFill
                     className={className}
-                    fill={fill} onMouseEnter={handleMouseEnter}
+                    fill={fill} onMouseOver={handleMouseOver}
                     onMouseLeave={handleMouseLeave} />
             case 2:
                 return <RiBracketsFill
                     className={className}
-                    fill={fill} onMouseEnter={handleMouseEnter}
+                    fill={fill} onMouseOver={handleMouseOver}
                     onMouseLeave={handleMouseLeave} />
             // case 3:
             //     return <RiParenthesesFill className={className} />
