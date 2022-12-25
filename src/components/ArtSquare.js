@@ -19,7 +19,9 @@ export default function ArtSquare({ bracket }) {
     };
 
     const handleMouseLeave = () => {
-        setFill("#fffaf1");
+        setTimeout(() => {
+            setFill("#fffaf1");
+        }, 150); // delay the color turning back to its default state
     };
     function renderBracket() {
         const className = "art-square__square";
