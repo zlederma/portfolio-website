@@ -3,12 +3,14 @@
     min-height: 200px;
     height: 30%;
     width: 100%;
-    min-width: 360px;
+    /* min-width: 360px; */
     background-color: #fffaf1;
     border: 3px solid rgb(41, 34, 32);
     box-shadow: 0px 0px 10px 6px rgba(197,70,44,1);
-    margin-top: 20px;
+    
+    /* margin-top: 20px;
     margin-bottom: 20px;
+    margin */
 }
 
 .detailed-project-card__title{

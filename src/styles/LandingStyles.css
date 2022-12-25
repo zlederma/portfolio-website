@@ -3,22 +3,17 @@
     display: flex;
     justify-content: center;
     background-color: rgb(41, 34, 32);
-    top: 66px;
 }
 
 .landing__column-art{
     width: 120px;
     min-width: 120px;
-    /* min-width: 80px; */
-    /* background-color: rgb(221, 154, 154); */
-    /* background-color: #e5ada4; */
-    /* background-color: #f5eae9; */
     height: 100%;
+    overflow: hidden;
 }
 .landing__column-welcome{
     width: 400px;
     min-width: 360px;
-    /* background-color:#e5ada4; */
     height: 100%;
     
 }
@@ -26,7 +21,6 @@
 .landing__column-projects{
     width: 600px;
     min-width: 300px;
-    /* background-color: rgb(168, 168, 196); */
     height: 100%;
 }
 
