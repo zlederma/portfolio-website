@@ -23,7 +23,7 @@ function App() {
   }, []);
   return (
     <>
-      <Navigation></Navigation>
+      {/* <Navigation></Navigation> */}
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
