@@ -8,15 +8,15 @@ export default function DetailedProjectCard({ title }) {
             <div className="detailed-project-card__title">
                 {title}
             </div>
-            <ul className="detailed-project-card__tags">
+            <div className="detailed-project-card__tag">
                 <li> frontend</li>
-            </ul>
-            <ul className="detailed-project-card__technologies">
+            </div>
+            <ul className="detailed-project-card__container-technologies">
                 Technologiees
                 <li> Bootstrap</li>
                 <li> JavaScript</li>
             </ul>
-            <ul className="detailed-project-card__links">
+            <ul className="detailed-project-card__container-links">
                 <li> Repo</li>
                 <li> Project</li>
             </ul>
