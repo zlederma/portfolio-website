@@ -1,5 +1,6 @@
 import DetailedProjectCard from "./DetailedProjectCard";
-import "../styles/DetailedProjectCardsStyles.css"
+// import "../styles/DetailedProjectCardsStyles.css"
+import "../../styles/project-cards/DetailedProjectCardsStyles.css"
 
 export default function DetailedProjectCards({ titles }) {
     function showCards() {
