@@ -8,7 +8,7 @@ export default function Technology({ data }) {
     if (link !== "") {
         return (
             <a href={link} target="blank" className="technology__button-container">
-                <img className='technology__image' src={image} />
+                <img className='technology__image' src={image} alt="" />
                 <div className='technology__title'> {technology}</div>
             </a>
         )
@@ -16,7 +16,7 @@ export default function Technology({ data }) {
     else {
         return (
             <div className="technology__container">
-                <img className='technology__image' src={image} />
+                <img className='technology__image' src={image} alt="" />
                 <div className='technology__title'> {technology} </div>
             </div>
         )

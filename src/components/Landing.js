@@ -3,7 +3,7 @@ import Welcome from "./Welcome"
 import ArtSquares from "./ArtSquares"
 import Projects from "./Projects"
 import Links from "./Links"
-export default function () {
+export default function Landing() {
     return (
         <>
             <div className="landing__container">

@@ -1,5 +1,5 @@
 import '../styles/ArtSquareStyles.css'
-import { RiBracesFill, RiCodeFill, RiBracketsFill, RiParenthesesFill } from "react-icons/ri";
+import { RiBracesFill, RiCodeFill, RiBracketsFill } from "react-icons/ri";
 import { useState } from 'react';
 export default function ArtSquare({ bracket }) {
 
@@ -15,6 +15,8 @@ export default function ArtSquare({ bracket }) {
             case 2:
                 setFill("#9b4acf");
                 break;
+            default:
+                return;
         }
     };
 
@@ -42,8 +44,8 @@ export default function ArtSquare({ bracket }) {
                     className={className}
                     fill={fill} onMouseOver={handleMouseOver}
                     onMouseLeave={handleMouseLeave} />
-            // case 3:
-            //     return <RiParenthesesFill className={className} />
+            default:
+                return <></>;
         }
     }
     return (

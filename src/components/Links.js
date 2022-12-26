@@ -8,17 +8,20 @@ export default function Links() {
             <nav className="landing__links">
                 <a
                     href="https://www.linkedin.com/in/zoe-lederman"
-                    target="_blank">
+                    target="_blank"
+                    rel="noreferrer" >
                     <FaLinkedin className="icon" />
                 </a>
                 <a
                     href="https://www.github.com/zlederma"
-                    target="_blank">
+                    target="_blank"
+                    rel="noreferrer" >
                     <FaGithub className="icon" />
                 </a>
                 <a
                     href={resume}
-                    target="_blank">
+                    target="_blank"
+                    rel="noreferrer" >
                     <IoDocumentTextSharp className="icon" />
                 </a>
             </nav>
