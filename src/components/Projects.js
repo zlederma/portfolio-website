@@ -1,10 +1,19 @@
 import '../styles/ProjectsStyles.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 export default function Projects() {
+
+    //makes projects not visible until the animation is starting
+    const [opacity, setOpacity] = useState("0");
+    useEffect(() => {
+        const opacityTimeOutId = setTimeout(() => { setOpacity("1") }, 1000);
+        return () => clearTimeout(opacityTimeOutId);
+    }, [])
+
     const white = "rgba(255, 250, 241, .6)"
     const green = "#008c6a";
     const orange = "#c5462c";
-    const purple = "#9b4acf"
+    const purple = "#9b4acf";
+
     const [topBorder, setTopBorder] = useState(white);
     const [leftBorder, setLeftBorder] = useState(white);
     const [rightBorder, setRightBorder] = useState(white);
@@ -12,6 +21,8 @@ export default function Projects() {
     let topTimeOutId = 0;
     let leftTimeOutId = 0;
     let rightTimeOutId = 0;
+
+
 
     const handleTopMouseOver = () => {
         setTopBorder(green)
@@ -62,7 +73,7 @@ export default function Projects() {
 
 
     return (
-        <div className='projects__container'>
+        <div className='projects__container' style={{ opacity: opacity }}>
             <h1 className='projects__title'>
                 Projects</h1>
             <ul >

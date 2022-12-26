@@ -1,6 +1,26 @@
+@keyframes drop {
+    0% {
+      transform: translateY(-1000%); /* Start the element off-screen */
+    }
+    50% {
+      transform: translateY(0); /* End the element on-screen */
+    }
+    65% {
+      transform: translateY(-8px); /* Add a small bounce */
+    }
+    100% {
+      transform: translateY(0); /* End the element on-screen */
+    }
+  }
+
 .projects__container{
-position: relative;
-width: 200px;
+   
+    position: relative;
+    width: 200px;
+  
+    animation: drop 2s ease-in-out; /* Apply the animation */
+    animation-delay: 1s;
+
 }
 
 .projects__title{
