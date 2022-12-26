@@ -1,57 +1,61 @@
 import '../styles/ProjectsStyles.css'
 import { useState } from 'react';
 export default function Projects() {
-    const [topBorder, setTopBorder] = useState("#fffaf1");
-    const [leftBorder, setLeftBorder] = useState("#fffaf1");
-    const [rightBorder, setRightBorder] = useState("#fffaf1");
+    const white = "rgba(255, 250, 241, .6)"
+    const green = "#008c6a";
+    const orange = "#c5462c";
+    const purple = "#9b4acf"
+    const [topBorder, setTopBorder] = useState(white);
+    const [leftBorder, setLeftBorder] = useState(white);
+    const [rightBorder, setRightBorder] = useState(white);
 
     let topTimeOutId = 0;
     let leftTimeOutId = 0;
     let rightTimeOutId = 0;
 
     const handleTopMouseOver = () => {
-        setTopBorder("#008c6a")
+        setTopBorder(green)
         clearTimeout(topTimeOutId)
     };
 
     const handleLeftMouseOver = () => {
-        setLeftBorder("#c5462c")
+        setLeftBorder(orange)
         clearTimeout(leftTimeOutId)
     };
     const handleRightMouseOver = () => {
-        setRightBorder("#9b4acf")
+        setRightBorder(purple)
         clearTimeout(rightTimeOutId)
     };
 
     const handleTopMouseLeave = () => {
         topTimeOutId = setTimeout(() => {
-            setTopBorder("#fffaf1")
+            setTopBorder(white)
         }, 200); // delay the color turning back to its default state
     };
     const handleLeftMouseLeave = () => {
         leftTimeOutId = setTimeout(() => {
-            setLeftBorder("#fffaf1")
+            setLeftBorder(white)
         }, 200);
     }
     const handleRightMouseLeave = () => {
         rightTimeOutId = setTimeout(() => {
-            setRightBorder("#fffaf1")
+            setRightBorder(white)
         }, 200);
     };
 
     const handleTopMouseDown = () => {
         topTimeOutId = setTimeout(() => {
-            setTopBorder("#fffaf1")
+            setTopBorder(white)
         }, 150);
     }
     const handleLeftMouseDown = () => {
         topTimeOutId = setTimeout(() => {
-            setTopBorder("#fffaf1")
+            setLeftBorder(white)
         }, 150);
     }
     const handleRightMouseDown = () => {
         topTimeOutId = setTimeout(() => {
-            setTopBorder("#fffaf1")
+            setRightBorder(white)
         }, 150);
     };
 
