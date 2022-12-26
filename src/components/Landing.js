@@ -4,6 +4,7 @@ import Welcome from "./Welcome"
 import ArtSquares from "./ArtSquares"
 import DetailedProjectCards from "./DetailedProjectCards"
 import Projects from "./Projects"
+import Links from "./Links"
 export default function () {
     return (
         <>
@@ -17,6 +18,7 @@ export default function () {
                 <div className="landing__column-projects">
                     <Projects />
                 </div>
+                <Links />
             </div>
         </>
     )

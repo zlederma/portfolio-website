@@ -1,0 +1,20 @@
+.links__wrapper{
+height: 100%;
+}
+.landing__links{
+    position: sticky;
+    top: 40px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.landing__links a{
+    display: block;
+    color: #fffaf1;
+    padding: 7px;
+    margin-right: 30px;
+}
+
+.landing__links a svg{
+  font-size: 35px;
+}
