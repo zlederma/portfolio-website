@@ -8,9 +8,10 @@
     margin-left: 10px;
     margin-right: 10px;
     padding:5px;
-    color:#fff6f4;
+    color: rgb(255, 250, 241, 1);
     text-decoration: none;
     background-color: rgba(197, 70, 44, .5);
+    /* background-color: rgba(197, 70, 44, .5); */
     border-radius: 7px;
     box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, .5);
 }
@@ -36,9 +37,11 @@
 .technology__image{
     height: 45px;
     padding: 3px;
+    padding-right: 5p
 }
 
 .technology__title{
+    color: rgb(255, 250, 241, .8);
     font-family: "Roboto";
     font-size: 20px;
     font-weight: 600;

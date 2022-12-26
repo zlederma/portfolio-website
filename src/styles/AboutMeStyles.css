@@ -13,7 +13,7 @@
 }
 
 .about-me__heading{
-    color: rgb(107, 75, 66);
+    color:  rgb(41, 34, 32);
     font-weight: 700;
     font-family: 'Playfair Display', serif;
     margin-bottom: 5px;
@@ -22,7 +22,7 @@
 .about-me__container p{
     font-size: 20px;
     margin-bottom: 20px;
-    color: rgba(41, 34, 32, .9);
+    color: rgba(41, 34, 32, .8);
 }
 
 .about-me__image{

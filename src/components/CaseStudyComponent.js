@@ -5,18 +5,22 @@ import ReactHtmlParser from 'react-html-parser';
 import { useState, useEffect } from "react";
 import Iframe from 'react-iframe';
 import Technologies from './Technologies';
+import Links from './Links'
 import "../styles/CaseStudyStyles.css";
+import { Link } from 'react-router-dom';
 
 const showHero = (data) => {
     return (
-        <>
-            <h1 className={"title text-center display-4"}> {data.headingText} </h1>
-            <Image className={"mb-2 mx-auto d-block image-80"} src={data.src} />
-            {data.technologies ? <Technologies data={data.technologies} /> : <></>}
-            <p className="paragraph mb-4">
-                {data.text}
-            </p>
-        </>
+        <div className='case-study__hero-wrapper'>
+            <div className='case-study__hero-container'>
+                <h1 className={"title text-center display-4"}> {data.headingText} </h1>
+                <Image className={"mb-2 mx-auto d-block image-80 hero-image "} src={data.src} />
+                {data.technologies ? <Technologies data={data.technologies} /> : <></>}
+                <p className="paragraph mb-4">
+                    {data.text}
+                </p>
+            </div>
+        </div>
     )
 }
 const showElement = (elementData) => {
@@ -126,12 +130,11 @@ export const CaseStudyComponent = (slug) => {
         const heroData = page.caseStudyCollection.items[0].hero;
         const sectionsData = page.caseStudyCollection.items[0].sections;
         return (
-            <div className="body">
-                <div className="mx-4 container">
-                    <div style={{ minHeight: "100px" }}></div>
-                    {showHero(heroData)}
-                    {showSections(sectionsData)}
-                    <div style={{ minHeight: "80px" }}></div>
+            <div className="wrapper">
+                {showHero(heroData)}
+                <div className="sections-wrapper">
+                    <div className="mx-4 sections-container">{showSections(sectionsData)}
+                    </div>
                 </div>
             </div>
 
