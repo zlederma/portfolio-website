@@ -1,8 +1,8 @@
 .about-me__wrapper{
-    background-color: #f5eae9;
+    background-color: #fffaf1;
     display: flex;
     justify-content: center;
-    min-height: calc(100vh - 118px);
+    min-height: calc(100vh - 52px);
 }
 
 .about-me__container{
@@ -13,16 +13,19 @@
 }
 
 .about-me__heading{
-    color: #c5462c;
+    color: rgb(107, 75, 66);
     font-weight: 700;
-    font-family: "Roboto",
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 5px;
 }
 
 .about-me__container p{
     font-size: 20px;
     margin-bottom: 20px;
+    color: rgba(41, 34, 32, .9);
 }
 
 .about-me__image{
-    width: 100%; 
+    width: 90%;
+    margin-left: 10%; 
 }
