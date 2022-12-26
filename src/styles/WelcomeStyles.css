@@ -26,3 +26,12 @@
     font-weight: 500;
     color: rgba(255, 250, 241, .6);
 }
+
+@media (max-width: 767px) {
+    .welcome__intro-container{
+        display: inline-block;
+        position: static;
+        margin-left: 40px;
+        margin-top: 10px;
+    }    
+}

@@ -25,14 +25,14 @@
     right: 15%;
 }
 
-/* md devices and down */
-@media (max-width: 991px) {
-    /* .landing__column-art{
-        display: none;
-    } */
-  }
-
     /* sm devices and down */
   @media (max-width: 767px) {
-   }
+    .landing__column-art{
+        display: none;
+    }
+    .landing__column-welcome{
+        width: 100%;
+        height: 100%;
+    }
+}
 
