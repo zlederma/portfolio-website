@@ -24,5 +24,5 @@
 .welcome__tagline{
     font-size: 20px;
     font-weight: 500;
-    color: rgb(255, 250, 241, .5);
+    color: rgba(255, 250, 241, .6);
 }
