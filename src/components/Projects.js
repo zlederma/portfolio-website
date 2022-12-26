@@ -26,17 +26,17 @@ export default function Projects() {
     const handleTopMouseLeave = () => {
         topTimeOutId = setTimeout(() => {
             setTopBorder("#fffaf1")
-        }, 300); // delay the color turning back to its default state
+        }, 200); // delay the color turning back to its default state
     };
     const handleLeftMouseLeave = () => {
         leftTimeOutId = setTimeout(() => {
             setLeftBorder("#fffaf1")
-        }, 300);
+        }, 200);
     }
     const handleRightMouseLeave = () => {
         rightTimeOutId = setTimeout(() => {
             setRightBorder("#fffaf1")
-        }, 300);
+        }, 200);
     };
 
     const handleTopMouseDown = () => {
