@@ -1,0 +1,51 @@
+.projects__container{
+position: relative;
+}
+
+.projects__title{
+    font-size: 30px;
+    font-weight: 600;
+    color: #fffaf1;
+
+}
+
+.projects__container ul{
+    /* display: block;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 250, 241, .8);
+    text-decoration: none;
+    padding: 3px; */
+}
+
+.projects__container a{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 250, 241, .8);
+    text-decoration: none;
+    padding: 3px;
+
+}
+
+.projects__links-decor-top, .projects__links-decor-left{
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    height: 100px;
+}
+
+.projects__links-decor-top{
+    /* position: absolute; */
+    /* top: -15px; */
+    border-top: 3px solid #fffaf1;
+    width: 100px;
+}
+
+.projects__links-decor-left{
+    /* position: absolute; */
+    /* left: -15px; */
+    border-left: 3px solid #fffaf1;
+    height: 100px;
+}
+

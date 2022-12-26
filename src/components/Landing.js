@@ -3,6 +3,7 @@ import ProjectCards from "./ProjectCards"
 import Welcome from "./Welcome"
 import ArtSquares from "./ArtSquares"
 import DetailedProjectCards from "./DetailedProjectCards"
+import Projects from "./Projects"
 export default function () {
     return (
         <>
@@ -14,8 +15,7 @@ export default function () {
                     <Welcome />
                 </div>
                 <div className="landing__column-projects">
-                    {/* //Titles, tags, technologies, project, repository, study */}
-                    <DetailedProjectCards titles={["Clipboard", "Book App", "Portfolio-ception"]} />
+                    <Projects />
                 </div>
             </div>
         </>
