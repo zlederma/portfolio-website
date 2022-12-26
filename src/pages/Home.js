@@ -7,10 +7,10 @@ export default function Home() {
     useEffect(() => {
         const timeout = setTimeout(() => {
             window.scrollTo({
-                top: 100,
+                top: 180,
                 behavior: 'smooth',
             });
-        }, 3500); // 3 seconds
+        }, 3500);
 
         return () => clearTimeout(timeout);
     }, []);
