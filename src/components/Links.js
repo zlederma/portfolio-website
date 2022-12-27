@@ -71,12 +71,6 @@ export default function Links() {
     return (
         <div className="links__wrapper">
             <nav className="landing__links">
-                {/* <a
-                    href="mailto:zlederma@ucsd.edu"
-                    target="_blank"
-                    rel="noreferrer" >
-                    <IoMailSharp className="icon" />
-                </a> */}
                 <a
                     href="https://www.linkedin.com/in/zoe-lederman"
                     target="_blank"

@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 const showHero = (data) => {
     return (
         <div className='case-study__hero-wrapper'>
+            <Links style={{ postion: "absolute", right: "0px" }} />
             <div className='case-study__hero-container'>
                 <h1 className={"title text-center display-4"}> {data.headingText} </h1>
                 <Image className={"mb-2 mx-auto d-block image-80 hero-image "} src={data.src} />
@@ -130,13 +131,15 @@ export const CaseStudyComponent = (slug) => {
         const heroData = page.caseStudyCollection.items[0].hero;
         const sectionsData = page.caseStudyCollection.items[0].sections;
         return (
-            <div className="wrapper">
+            // <div className="wrapper">
+            <>
                 {showHero(heroData)}
                 <div className="sections-wrapper">
                     <div className="mx-4 sections-container">{showSections(sectionsData)}
                     </div>
                 </div>
-            </div>
+            </>
+            // </div>
 
         )
     }
