@@ -8,8 +8,7 @@
     display: flex; 
     justify-content: center;
     background-color:  rgb(41, 34, 32);
-    position: relative;
-    padding-left: 80px;
+    padding-left: 20px;
     padding-right: 80px;
 }
 
@@ -33,10 +32,31 @@
 }
 .sections-wrapper{
     padding-left: 55px;
-    padding-right: 55px;
     background-color: #fffaf1;
     display: flex; 
-    justify-content: center;
+    justify-content: space-between;
+    position: relative;
+    display: flex; 
+}
+
+.projects-container{
+    transform: translateX(10px);
+    transform: scaleX(0.9) scaleY(0.9);
+
+    padding: 50px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    margin-top: 40px;
+    /* margin-top: 87px; */
+    position: sticky;
+    top: 60px;
+    height: 100%;
+    border-radius: 7px 0px 0px 7px;
+    background-color: rgb(41, 34, 32);
+}
+
+.projects__projects{
+    transform: scaleX(0.5) scaleY(0.5);
 }
 .sections-container{
     margin-top: 30px;

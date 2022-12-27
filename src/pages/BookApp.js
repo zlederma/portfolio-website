@@ -5,7 +5,6 @@ export default function BookApp() {
     return (
         <>
             <CaseStudyComponent slug="book-app" />
-            <ProjectCards slug="book-app" />
         </>
     )
 }
