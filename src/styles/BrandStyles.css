@@ -1,0 +1,33 @@
+.brand__container{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 35px;
+    left: 35px;
+    z-index: 200;
+    
+    background-color: rgba(41, 34, 32, 1);
+    border-radius: 100%;
+    border:  2px solid rgba(255, 250, 241, 1);
+}
+
+.brand__container svg{
+    margin-bottom: 3px;
+    fill: rgba(255, 250, 241, 1);
+    padding-top: 2px;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+}
+
+.brand__container svg:hover{
+    fill: #9b4acf;
+}
+
+.brand__container:active{
+    outline:  2px solid #9b4acf;
+    border:  2px solid #9b4acf;
+}

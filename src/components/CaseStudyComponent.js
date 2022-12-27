@@ -7,6 +7,7 @@ import Iframe from 'react-iframe';
 import Technologies from './Technologies';
 import Links from './Links'
 import Projects from './Projects';
+import Brand from './Brand';
 import "../styles/CaseStudyStyles.css";
 import { Link } from 'react-router-dom';
 // Todo: get the projects section to not AnimationEffect, and do some pagination
@@ -22,7 +23,8 @@ const showHero = (data) => {
                     {data.text}
                 </p>
             </div>
-        </div >
+        </div>
+
     )
 }
 const showElement = (elementData) => {
@@ -132,7 +134,8 @@ export const CaseStudyComponent = (slug) => {
         const heroData = page.caseStudyCollection.items[0].hero;
         const sectionsData = page.caseStudyCollection.items[0].sections;
         return (
-            <>
+            <div>
+                <Brand />
                 {showHero(heroData)}
                 <div className="sections-wrapper">
                     <div className="mx-4 sections-container">{showSections(sectionsData)}
@@ -141,7 +144,7 @@ export const CaseStudyComponent = (slug) => {
                         <Projects className='projects__projects' />
                     </div>
                 </div>
-            </>
+            </div>
         )
     }
     return (
