@@ -101,10 +101,10 @@ const showSection = (sectionData) => {
         <>
             {/* Add something for heading and something for subheading */}
             {sectionData.headingText ?
-                <h2 className="mb-2 mt-2 heading">
+                <h2 className="mb-2 mt-2 display-5 heading">
                     {sectionData.headingText} </h2> : <></>}
             {sectionData.subHeadingText ?
-                <h3 className="mb-2 subheading">
+                <h3 className="mb-2 display-6 subheading">
                     {sectionData.subHeadingText} </h3> : <></>}
             <div>
                 {showRows(sectionData.row)}
@@ -137,7 +137,7 @@ export const CaseStudyComponent = (slug) => {
                 <Navigation />
                 {showHero(heroData)}
                 <div className="sections-wrapper">
-                    <div className="mx-4 sections-container">{showSections(sectionsData)}
+                    <div className="sections-container">{showSections(sectionsData)}
                     </div>
                 </div>
             </div>

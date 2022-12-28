@@ -23,10 +23,17 @@
     font-size: 20px;
     margin-bottom: 20px;
     color: rgba(41, 34, 32, .8);
+    margin-right: 10%; 
 }
 
 .about-me__image{
     border-radius: 7px;
     width: 90%;
-    margin-left: 10%; 
+}
+
+/* sm devices and down */
+@media (max-width: 767px) {
+    .about-me__container p{
+        font-size: 16px;
+    }
 }
