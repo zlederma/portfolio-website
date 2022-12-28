@@ -1,12 +1,13 @@
 .brand__container{
-    width: 60px;
-    height: 60px;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    /* position: fixed;
     top: 35px;
-    left: 35px;
+    left: 35px; */
     z-index: 200;
     
     background-color: rgba(41, 34, 32, 1);

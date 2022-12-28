@@ -1,57 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
-
-/* #navbar{
-   position: sticky;
-   top: 0px;
-} */
-#navbar .name-icon-div {
-    background-color: white;
-}
-#navbar .name-icon-div:hover{
-    background-color: #f2d3ce;
-}
-
-#navbar .name-icon-div:active{
-    background-color: #e5ada4;
-}
-
 /* Using id to make these styles more specific and overide bootstrap. */
 #navbar .nav-link {
-    color: white;
+    color: rgb(255, 250, 241);
+    font-family: "Roboto";
+    font-size: 20px;
 }
 
 #navbar .nav-link:hover{
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: #f2d3ce;
+    color:#c5462c
 }
 
-#navbar :active.nav-link {
-    color: #e5ada4 ;
-    text-decoration-color: #e5ada4; 
+#navbar .dropdown-menu  {
+    background-color:rgba(41, 34, 32, 1);
+    border: 2px solid rgb(255, 250, 241, 1);
+    border-radius: 7px;
 }
 
-#navbar .nav-link svg:active {
-    fill: #e5ada4 ;
+#navbar .dropdown-item{
+    font-family: "Roboto";
+    font-size: 18px;
+    color:  rgb(255, 250, 241, 1);
 }
 
-#navbar :hover.icon {
-    color: #f2d3ce ;
+#navbar .dropdown-item:hover{
+    color: #008c6a;
+    background-color: unset;
 }
 
-#navbar :hover.my-dropdown-item {
-    background-color: #f2d3ce;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: #f2d3ce;
+#navbar .dropdown-item:focus{
+    color: #008c6a;
+    background-color: unset;
+}
+#navbar .dropdown-item:active{
+    color: #008c6a;
+    background-color: unset;
 }
 
-#navbar :hover.card {
-    border: 2px solid lightgrey;
-    z-index: 2 ;
+#navbar .navbar-toggler{
+    color: rgb(255, 250, 241, 1);
+    background-color: unset;
+}
+#navbar .navbar-toggler:hover{
+    color: #008c6a;
+    background-color: unset;
 }
 
-#navbar:active.card {
-    border: 2px solid lightgrey;
-    z-index: 2 ;
+#navbar .navbar-toggler:focus{
+    color: #008c6a;
+    background-color: unset;
 }
+#navbar .navbar-toggler:active{
+    color: #008c6a;
+    background-color: unset;
+}
+
+
+
