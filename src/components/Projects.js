@@ -77,18 +77,18 @@ export default function Projects() {
             <h1 className='projects__title'>
                 Projects</h1>
             <ul >
-                <a href="/projects/clipboard" style={{ color: topBorder }} onMouseOver={handleTopMouseOver}
+                <a href="/projects/portfolioception" style={{ color: topBorder }} onMouseOver={handleTopMouseOver}
                     onMouseLeave={handleTopMouseLeave}
-                    onMouseDown={handleTopMouseDown} >Clipboard</a>
+                    onMouseDown={handleTopMouseDown} >Portfolioception</a>
                 <a href="/projects/book-app" style={{ color: leftBorder }} onMouseOver={handleLeftMouseOver}
                     onMouseLeave={handleLeftMouseLeave}
                     onMouseDown={handleLeftMouseDown}>Book App</a>
-                <a href="/projects/portfolioception" style={{ color: rightBorder }} onMouseOver={handleRightMouseOver}
+                <a href="/projects/triton-jam" style={{ color: rightBorder }} onMouseOver={handleRightMouseOver}
                     onMouseLeave={handleRightMouseLeave}
-                    onMouseDown={handleRightMouseDown}>Portfolio-ception</a>
+                    onMouseDown={handleRightMouseDown}>Triton Jam</a>
             </ul>
             <a className='projects__links-decor'
-                href="/projects/clipboard"
+                href="/projects/portfolioception"
                 style={{
                     width: "120px",
                     top: "-15px",
@@ -113,7 +113,7 @@ export default function Projects() {
                 onMouseDown={handleLeftMouseDown}>
             </a>
             <a className='projects__links-decor'
-                href="/projects/portfolioception"
+                href="/projects/triton-jam"
                 style={{
                     height: "150px",
                     padding: "20px",
