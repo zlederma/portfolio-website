@@ -26,6 +26,7 @@
 }
 
 .about-me__image{
+    border-radius: 7px;
     width: 90%;
     margin-left: 10%; 
 }
