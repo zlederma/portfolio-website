@@ -8,12 +8,14 @@ import { FaLinkedin, FaGithub, } from "react-icons/fa";
 import { IoDocumentTextSharp } from "react-icons/io5";
 import resume from '../assets/Resume-Zoe-Lederman.pdf';
 import NameIcon from '../assets/NameIcon';
+import Links from "./Links";
+import Brand from "./Brand";
 
 
 export default function Navigation() {
     return (
         <div>
-            <Navbar id="navbar" style={{ background: "rgb(50,50,50)" }} collapseOnSelect expand="md"
+            <Navbar id="navbar" style={{ background: "rgba(41, 34, 32, 1)" }} collapseOnSelect expand="md"
                 variant="dark"
                 fixed="top">
                 <Container>
@@ -32,11 +34,12 @@ export default function Navigation() {
                                 <NavDropdown.Item className="my-dropdown-item" href="/projects/instacart-redesign">Instacart Redesign</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
-                        <Nav className="mx-3 flex-row" justify="true" >
+                        <Links />
+                        {/* <Nav className="mx-3 flex-row" justify="true" >
                             <Nav.Link href="https://www.linkedin.com/in/zoe-lederman" target="_blank"> <FaLinkedin className="icon" style={{ fontSize: "30px" }} /></Nav.Link>
                             <Nav.Link href="https://www.github.com/zlederma" target="_blank"><FaGithub className="icon" style={{ fontSize: "30px" }} /></Nav.Link>
                             <Nav.Link href={resume} target="_blank"><IoDocumentTextSharp className="icon" style={{ fontSize: "30px" }} /></Nav.Link>
-                        </Nav>
+                        </Nav> */}
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

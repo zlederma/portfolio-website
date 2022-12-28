@@ -21,3 +21,24 @@
 .landing__links a svg{
   font-size: 35px;
 }
+
+.links__wrapper-nav{
+  position: static;
+  right:0px;
+
+}
+.landing__links-nav{
+    text-align: center;
+    padding-bottom: 0px;
+}
+
+.landing__links-nav a{
+    display: inline-block;
+    color: #fffaf1;
+    padding: 8px;
+    /* margin-right: 25px; */
+}
+
+.landing__links-nav a svg{
+  font-size: 35px;
+}

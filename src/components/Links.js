@@ -68,9 +68,12 @@ export default function Links() {
             setThirdIcon(white)
         }, 150);
     }
+
+    const modifier = (window.location.pathname !== "/") ? "-nav" : "";
+    //to change the style when it is part of the nav bar
     return (
-        <div className="links__wrapper">
-            <nav className="landing__links">
+        <div className={`links__wrapper${modifier}`}>
+            <nav className={`landing__links${modifier}`}>
                 <a
                     href="https://www.linkedin.com/in/zoe-lederman"
                     target="_blank"

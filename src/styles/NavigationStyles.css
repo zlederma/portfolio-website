@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 
+/* #navbar{
+   position: sticky;
+   top: 0px;
+} */
 #navbar .name-icon-div {
     background-color: white;
 }

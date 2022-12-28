@@ -9,12 +9,11 @@ import Links from './Links'
 import Projects from './Projects';
 import Brand from './Brand';
 import "../styles/CaseStudyStyles.css";
-import { Link } from 'react-router-dom';
+import Navigation from './Navigation'
 // Todo: get the projects section to not AnimationEffect, and do some pagination
 const showHero = (data) => {
     return (
         <div className='case-study__hero-wrapper'>
-            <Links style={{ postion: "absolute", right: "0px" }} />
             <div className='case-study__hero-container'>
                 <h1 className={"title text-center display-4"}> {data.headingText} </h1>
                 <Image className={"mb-2 mx-auto d-block image-80 hero-image "} src={data.src} />
@@ -135,13 +134,10 @@ export const CaseStudyComponent = (slug) => {
         const sectionsData = page.caseStudyCollection.items[0].sections;
         return (
             <div>
-                <Brand />
+                <Navigation />
                 {showHero(heroData)}
                 <div className="sections-wrapper">
                     <div className="mx-4 sections-container">{showSections(sectionsData)}
-                    </div>
-                    <div className='projects-container'>
-                        <Projects className='projects__projects' />
                     </div>
                 </div>
             </div>
