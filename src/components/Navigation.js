@@ -16,11 +16,9 @@ export default function Navigation() {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <NavDropdown title="Projects" id="collasible-nav-dropdown">
+                                <NavDropdown.Item href="/projects/portfolioception">Portfolioception</NavDropdown.Item>
                                 <NavDropdown.Item href="/projects/book-app">Book App</NavDropdown.Item>
                                 <NavDropdown.Item href="/projects/triton-jam">Triton Jam</NavDropdown.Item>
-                                <NavDropdown.Item href="/projects/portfolioception">Portfolioception</NavDropdown.Item>
-                                <NavDropdown.Item href="/projects/temperature-blanket">Temperature Blanket</NavDropdown.Item>
-                                <NavDropdown.Item href="/projects/instacart-redesign">Instacart Redesign</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
                         <Links />
