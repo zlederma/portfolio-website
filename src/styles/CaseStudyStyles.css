@@ -70,11 +70,13 @@
 }
 
 .image-100{
+    border-radius: 7px;
     width: 100%; 
 }
 
 .image-80{
     width: 80%; 
+    border-radius: 7px;
 }
 
 .heuristics{
