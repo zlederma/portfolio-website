@@ -5,7 +5,7 @@ export default function Projects() {
     //makes projects not visible until the animation is starting
     const [opacity, setOpacity] = useState("0");
     useEffect(() => {
-        const opacityTimeOutId = setTimeout(() => { setOpacity("1") }, 1000);
+        const opacityTimeOutId = setTimeout(() => { setOpacity("1") }, 1400);
         return () => clearTimeout(opacityTimeOutId);
     }, [])
 
