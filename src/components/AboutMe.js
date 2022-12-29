@@ -6,18 +6,21 @@ export default function AboutMe() {
     return (
         <div id="About" className="about-me__wrapper">
             <div className="about-me__container">
-                <h1 className='about-me__heading'> About Me </h1>
+                <h1 className='about-me__heading'> About </h1>
                 <div>
                     <Row>
                         <Col lg={6} sm={12} xs={12}>
                             <p>
-                                Determined, fast-learning and detail-oriented UC: San Diego graduate with a degree in Cognitive Science (Design and Interaction) and a minor in Computer Science. I’m also a rock climber, a cat fanatic, and book lover. Former REI Frontend Software Developer Intern, who is now seeking full time development roles!
+                                Hello! I'm a recent graduate of the University of California, San Diego, where I earned a degree in Cognitive Science (Human-Computer Interaction) and a minor in Computer Science. I have also gained valuable experience as a REI Frontend Software Developer Intern, where I developed the <a href="https://www.rei.com/action/network/campaigns">All Campaigns Page</a> and contributed to a variety of other projects.
                             </p>
                             <p>
-                                I have experience in using frontend technologies such as Javascript, React, and Vue to create dynamic and responsive web applications. I am fascinated by and invested in learning to utilize new languages and tools to become a better developer.
+                                I'm an analytical, independent, and creative frontend developer with a passion for building dynamic and responsive web applications using technologies such as Javascript, React, and Vue. I am always eager to learn and expand my knowledge and skills, and I am excited to bring my enthusiasm for learning and growth to a new team.
                             </p>
                             <p>
-                                I have a background in UI/UX Design - including user research, user testing and prototyping. While I am happy to bring this skill set to the table, development is where my passion lies. However, understanding UI/UX design gives me a head start in clearly and productively communicating with designers, along with helping me to succeed in the visual aspects of frontend development.
+                                I have a strong background in UI/UX design, including user research, user testing, and prototyping. My understanding of design principles allows me to effectively communicate with designers and excel in the visual aspects of frontend development.
+                            </p>
+                            <p>
+                                When I'm not working, I can often be found rock climbing, hanging out with cats, or curled up with a good book.
                             </p>
                         </Col>
                         <Col lg={6} sm={8} xs={12}>
