@@ -4,6 +4,7 @@ import { useState } from 'react';
 export default function ArtSquare({ bracket }) {
 
     const [fill, setFill] = useState("#fffaf1")
+    let isFilled = false;
     const handleMouseOver = () => {
         switch (bracket) {
             case 0:
@@ -22,8 +23,32 @@ export default function ArtSquare({ bracket }) {
 
     const handleMouseLeave = () => {
         setTimeout(() => {
-            setFill("#fffaf1");
+            if (!isFilled) {
+                setFill("#fffaf1");
+            }
         }, 150); // delay the color turning back to its default state
+    };
+
+    const handleClick = () => {
+        if (isFilled) {
+            setFill("#fffaf1");
+            isFilled = false;
+        } else {
+            switch (bracket) {
+                case 0:
+                    setFill("#c5462c");
+                    break;
+                case 1:
+                    setFill("#008c6a");
+                    break;
+                case 2:
+                    setFill("#9b4acf");
+                    break;
+                default:
+                    return;
+            }
+            isFilled = true;
+        }
     };
     function renderBracket() {
         const className = "art-square__square";
@@ -33,17 +58,20 @@ export default function ArtSquare({ bracket }) {
                 return <RiBracesFill
                     className={className}
                     fill={fill} onMouseOver={handleMouseOver}
-                    onMouseLeave={handleMouseLeave} />
+                    onMouseLeave={handleMouseLeave}
+                    onClick={handleClick} />
             case 1:
                 return <RiCodeFill
                     className={className}
                     fill={fill} onMouseOver={handleMouseOver}
-                    onMouseLeave={handleMouseLeave} />
+                    onMouseLeave={handleMouseLeave}
+                    onClick={handleClick} />
             case 2:
                 return <RiBracketsFill
                     className={className}
                     fill={fill} onMouseOver={handleMouseOver}
-                    onMouseLeave={handleMouseLeave} />
+                    onMouseLeave={handleMouseLeave}
+                    onClick={handleClick} />
             default:
                 return <></>;
         }
