@@ -42,3 +42,18 @@
 .landing__links-nav a svg{
   font-size: 35px;
 }
+
+@media (max-width: 575px) {
+    .landing__links a{
+      padding: 2px;
+      transform: scale(0.7, 0.7);
+      margin-right: 5px;
+  }
+
+    .landing__links{
+      top: 7px;
+      text-align: center;
+      padding-bottom: 7px;
+  }
+    
+}

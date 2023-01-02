@@ -17,8 +17,7 @@
    
     position: relative;
     width: 200px;
-  
-    animation: drop 2s ease-in-out; /* Apply the animation */
+    animation: drop 2s ease-in-out; 
     animation-delay: 1s;
 
 }
@@ -48,4 +47,24 @@
 
 .projects__links-decor{
     position: absolute;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 575px) {
+    .projects__container{
+      transform: scale(0.7, 0.7);
+      animation: none;
+      animation: fadeIn 1.5s linear; 
+      animation-delay: 1s;
+  }
 }

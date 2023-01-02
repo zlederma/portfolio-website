@@ -8,16 +8,14 @@
     top: 30vh;
     padding: 20px;
     padding-bottom: 40px;
-    /* background-color: antiquewhite; */
 }
 
 .welcome__heading{
-    /* font-family: "Roboto";  */
     font-family: 'Playfair Display', serif;
     font-size: 40px; 
     font-weight: 900;
     letter-spacing: 0px;
-    line-height: 60px;
+    line-height: 40px;
     color: #fffaf1;
 }
 
@@ -31,7 +29,20 @@
     .welcome__intro-container{
         display: inline-block;
         position: static;
-        margin-left: 40px;
-        margin-top: 10px;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .welcome__intro-container{
+        margin: 5px;
+        margin-top: 30px;
+    }
+    .welcome__tagline{
+        font-size: 13px;
+    }
+    .welcome__heading{
+        font-size: 30px; 
+        line-height: 30px;
     }    
 }
