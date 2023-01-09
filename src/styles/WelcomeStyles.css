@@ -25,6 +25,20 @@
     color: rgba(255, 250, 241, .6);
 }
 
+@media (max-width: 991px) {
+    .welcome__intro-container{
+        margin: 5px;
+        margin-top: 30px;
+    }
+    .welcome__tagline{
+        font-size: 15px;
+    }
+    .welcome__heading{
+        font-size: 32px; 
+        line-height: 32px;
+    }    
+}
+
 @media (max-width: 767px) {
     .welcome__intro-container{
         display: inline-block;

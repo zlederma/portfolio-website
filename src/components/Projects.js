@@ -3,11 +3,11 @@ import { useState, useEffect } from 'react';
 export default function Projects() {
 
     //makes projects not visible until the animation is starting
-    const [opacity, setOpacity] = useState("0");
-    useEffect(() => {
-        const opacityTimeOutId = setTimeout(() => { setOpacity("1") }, 1400);
-        return () => clearTimeout(opacityTimeOutId);
-    }, [])
+    // const [opacity, setOpacity] = useState("0");
+    // useEffect(() => {
+    //     const opacityTimeOutId = setTimeout(() => { setOpacity("1") }, 1400);
+    //     return () => clearTimeout(opacityTimeOutId);
+    // }, [])
 
     const white = "rgba(255, 250, 241, .6)"
     const green = "#008c6a";
@@ -23,7 +23,7 @@ export default function Projects() {
     let rightTimeOutId = 0;
 
 
-
+    //TODO: update to use a reducer function instead of a bunch of seperate event handlers.
     const handleTopMouseOver = () => {
         setTopBorder(green)
         clearTimeout(topTimeOutId)
@@ -73,7 +73,7 @@ export default function Projects() {
 
 
     return (
-        <div className='projects__container' style={{ opacity: opacity }}>
+        <div className='projects__container'>
             <h1 className='projects__title'>
                 Projects</h1>
             <ul >

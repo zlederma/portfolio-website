@@ -6,8 +6,8 @@ export default function Welcome() {
                 <div className="welcome__heading"> Zoe Lederman</div>
                 <div className="welcome__tagline">
                     front-end developer
-                    <br />focused on fabricating intuitive user experiences <br />
-                    fueled by a fervent curiousity to learn and grow
+                    <br />focused on fabricating intuitive user interfaces<br />
+                    fueled by a fervent curiousity to learn
                 </div>
             </div>
         </div>

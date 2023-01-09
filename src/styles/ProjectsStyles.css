@@ -17,8 +17,8 @@
    
     position: relative;
     width: 200px;
-    animation: drop 2s ease-in-out; 
-    animation-delay: 1s;
+    /* animation: drop 2s ease-in-out; 
+    animation-delay: 1s; */
 
 }
 
@@ -59,12 +59,19 @@
   }
 }
 
+@media (max-width: 991px) {
+  .projects__container{
+    transform: scale(0.8, 0.8);
+    /* animation: fadeIn 1.5s linear; 
+    animation-delay: 1s; */
+  }
+}
 
 @media (max-width: 575px) {
     .projects__container{
       transform: scale(0.7, 0.7);
-      animation: none;
+      /* animation: none;
       animation: fadeIn 1.5s linear; 
-      animation-delay: 1s;
+      animation-delay: 1s; */
   }
 }

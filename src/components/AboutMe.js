@@ -6,7 +6,7 @@ export default function AboutMe() {
     return (
         <div id="About" className="about-me__wrapper">
             <div className="about-me__container">
-                <h1 className='about-me__heading'> About </h1>
+                <h1 className='about-me__heading'> About Me </h1>
                 <div>
                     <Row>
                         <Col lg={6} sm={12} xs={12}>
